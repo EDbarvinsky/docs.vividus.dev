@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>WebSocket Plugin :: VIVIDUS</title>
     <link rel="canonical" href="https://docs.vividus.dev/vividus/latest/plugins/plugin-websocket.html">
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
@@ -13,9 +13,8 @@
 <link rel="manifest" href="../../../site.webmanifest">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-<script src="https://buttons.github.io/buttons.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 <link rel="stylesheet" href="../../../_/css/additional.css">
-<link rel="stylesheet" href="../../../_/css/search.css">
     <script>var uiRootPath = '../../../_'</script>
   </head>
   <body class="article">
@@ -25,8 +24,10 @@
          <div class="navbar-item">
             <a href="https://github.com/vividus-framework/vividus">VIVIDUS // Docs</a>
          </div>
-           <div class="navbar-item">
-             <input id="search-input" type="text" placeholder="Search docs">
+           <div class="navbar-item search hide-for-print">
+             <div id="search-field" class="field">
+               <input id="search-input" type="text" placeholder="Search the docs">
+             </div>
            </div>
          <button class="navbar-burger" data-target="topbar-nav">
          <span></span>
@@ -66,7 +67,7 @@
                </div>
             </div>
             <div class="navbar-item">
-              <a href="https://vividus-support.herokuapp.com/">
+              <a href="https://vividus-support.vercel.app/">
                 <span class="icon">
                   <svg fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                      <g stroke-width=".790123">
@@ -125,7 +126,16 @@
     <a class="nav-link" href="../glossary.html">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../tests-configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../reporting.html">Reporting</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -144,6 +154,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../commons/table-transformers.html">Table Transformers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../commons/cli.html">CLI</a>
   </li>
 </ul>
   </li>
@@ -178,6 +191,9 @@
     <a class="nav-link" href="azure.html">Azure</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="plugin-azure-resource-manager.html">Resource Manager</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="plugin-azure-cosmos-db.html">Cosmos DB</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -191,6 +207,12 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="plugin-azure-functions.html">Functions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="plugin-azure-key-vault.html">Key Vault</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="plugin-azure-sql-db.html">SQL Database</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="plugin-azure-storage-account.html">Storage Account</a>
@@ -216,16 +238,31 @@
     <a class="nav-link" href="plugin-excel.html">Excel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="plugin-html.html">HTML*</a>
+    <a class="nav-link" href="plugin-html.html">HTML</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="plugin-json.html">JSON</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="plugin-parquet.html">Parquet*</a>
+    <a class="nav-link" href="plugin-parquet.html">Parquet</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="plugin-xml.html">XML*</a>
+    <a class="nav-link" href="plugin-xml.html">XML</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-yaml.html">YAML</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Remoting</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-ssh.html">SSH</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-winrm.html">WinRM</a>
   </li>
 </ul>
   </li>
@@ -235,6 +272,9 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="plugin-browserstack.html">BrowserStack</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-mobitru.html">Mobitru</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="plugin-lambda-test.html">LambdaTest</a>
@@ -251,13 +291,13 @@
     <a class="nav-link" href="plugin-accessibility.html">Accessibility</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="plugin-applitools.html">Applitools*</a>
+    <a class="nav-link" href="plugin-applitools.html">Applitools</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="plugin-datetime.html">Date/Time</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="plugin-electron.html">Electron*</a>
+    <a class="nav-link" href="plugin-electron.html">Electron</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="plugin-email.html">Email</a>
@@ -278,7 +318,7 @@
     <a class="nav-link" href="plugin-rest-api.html">REST API</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="plugin-ssh.html">SSH</a>
+    <a class="nav-link" href="plugin-shell.html">Shell</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="plugin-visual.html">Visual Testing</a>
@@ -367,6 +407,15 @@
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Mobile Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../user-guides/appium-setup.html">Appium Setup</a>
+  </li>
+</ul>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
@@ -374,7 +423,19 @@
     <span class="nav-text">Developer Guides</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../developer-guides/custom-plugins.html">Custom Plugins</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../developer-guides/extension-points.html">Extension points</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developer-guides/extensions.html">Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developer-guides/plugins.html">Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developer-guides/custom-modules.html">Custom modules</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -394,79 +455,70 @@
           <a href="../index.html">latest</a>
         </li>
         <li class="version">
+          <a href="../../0.5.2/index.html">0.5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../0.5.1/index.html">0.5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../0.5.0/index.html">0.5.0</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.16/index.html">0.4.16</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.15/index.html">0.4.15</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.14/index.html">0.4.14</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.13/index.html">0.4.13</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.12/index.html">0.4.12</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.11/index.html">0.4.11</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.10/index.html">0.4.10</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.9/index.html">0.4.9</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.8/index.html">0.4.8</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.7/index.html">0.4.7</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.6/index.html">0.4.6</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.5/index.html">0.4.5</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.4/index.html">0.4.4</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.3/index.html">0.4.3</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.2/index.html">0.4.2</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.1/index.html">0.4.1</a>
+        </li>
+        <li class="version">
           <a href="../../0.4.0/index.html">0.4.0</a>
         </li>
         <li class="version">
           <a href="../../0.3.12/index.html">0.3.12</a>
         </li>
         <li class="version">
-          <a href="../../0.3.11/index.html">0.3.11</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.10/index.html">0.3.10</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.9/index.html">0.3.9</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.8/index.html">0.3.8</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.7/index.html">0.3.7</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.6/index.html">0.3.6</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.5/index.html">0.3.5</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.4/index.html">0.3.4</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.3/index.html">0.3.3</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.2/index.html">0.3.2</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.1/index.html">0.3.1</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.0/index.html">0.3.0</a>
-        </li>
-        <li class="version">
           <a href="../../0.2.14/index.html">0.2.14</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.13/index.html">0.2.13</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.12/index.html">0.2.12</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.11/index.html">0.2.11</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.10/index.html">0.2.10</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.9/index.html">0.2.9</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.8/index.html">0.2.8</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.7/index.html">0.2.7</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.6/index.html">0.2.6</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.5/index.html">0.2.5</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.4/index.html">0.2.4</a>
         </li>
       </ul>
     </li>
@@ -490,31 +542,28 @@
   <button class="version-menu-toggle" title="Show other versions of page">latest</button>
   <div class="version-menu">
     <a class="version is-current" href="plugin-websocket.html">latest</a>
+    <a class="version" href="../../0.5.2/plugins/plugin-websocket.html">0.5.2</a>
+    <a class="version" href="../../0.5.1/plugins/plugin-websocket.html">0.5.1</a>
+    <a class="version" href="../../0.5.0/plugins/plugin-websocket.html">0.5.0</a>
+    <a class="version" href="../../0.4.16/plugins/plugin-websocket.html">0.4.16</a>
+    <a class="version" href="../../0.4.15/plugins/plugin-websocket.html">0.4.15</a>
+    <a class="version" href="../../0.4.14/plugins/plugin-websocket.html">0.4.14</a>
+    <a class="version" href="../../0.4.13/plugins/plugin-websocket.html">0.4.13</a>
+    <a class="version" href="../../0.4.12/plugins/plugin-websocket.html">0.4.12</a>
+    <a class="version" href="../../0.4.11/plugins/plugin-websocket.html">0.4.11</a>
+    <a class="version" href="../../0.4.10/plugins/plugin-websocket.html">0.4.10</a>
+    <a class="version" href="../../0.4.9/plugins/plugin-websocket.html">0.4.9</a>
+    <a class="version" href="../../0.4.8/plugins/plugin-websocket.html">0.4.8</a>
+    <a class="version" href="../../0.4.7/plugins/plugin-websocket.html">0.4.7</a>
+    <a class="version" href="../../0.4.6/plugins/plugin-websocket.html">0.4.6</a>
+    <a class="version" href="../../0.4.5/plugins/plugin-websocket.html">0.4.5</a>
+    <a class="version" href="../../0.4.4/plugins/plugin-websocket.html">0.4.4</a>
+    <a class="version" href="../../0.4.3/plugins/plugin-websocket.html">0.4.3</a>
+    <a class="version" href="../../0.4.2/plugins/plugin-websocket.html">0.4.2</a>
+    <a class="version" href="../../0.4.1/plugins/plugin-websocket.html">0.4.1</a>
     <a class="version" href="../../0.4.0/plugins/plugin-websocket.html">0.4.0</a>
     <a class="version" href="../../0.3.12/plugins/plugin-websocket.html">0.3.12</a>
-    <a class="version" href="../../0.3.11/plugins/plugin-websocket.html">0.3.11</a>
-    <a class="version" href="../../0.3.10/plugins/plugin-websocket.html">0.3.10</a>
-    <a class="version" href="../../0.3.9/plugins/plugin-websocket.html">0.3.9</a>
-    <a class="version" href="../../0.3.8/plugins/plugin-websocket.html">0.3.8</a>
-    <a class="version" href="../../0.3.7/plugins/plugin-websocket.html">0.3.7</a>
-    <a class="version" href="../../0.3.6/plugins/plugin-websocket.html">0.3.6</a>
-    <a class="version" href="../../0.3.5/plugins/plugin-websocket.html">0.3.5</a>
-    <a class="version" href="../../0.3.4/plugins/plugin-websocket.html">0.3.4</a>
-    <a class="version" href="../../0.3.3/plugins/plugin-websocket.html">0.3.3</a>
-    <a class="version" href="../../0.3.2/plugins/plugin-websocket.html">0.3.2</a>
-    <a class="version is-missing" href="../../0.3.1/index.html">0.3.1</a>
-    <a class="version is-missing" href="../../0.3.0/index.html">0.3.0</a>
     <a class="version is-missing" href="../../0.2.14/index.html">0.2.14</a>
-    <a class="version is-missing" href="../../0.2.13/index.html">0.2.13</a>
-    <a class="version is-missing" href="../../0.2.12/index.html">0.2.12</a>
-    <a class="version is-missing" href="../../0.2.11/index.html">0.2.11</a>
-    <a class="version is-missing" href="../../0.2.10/index.html">0.2.10</a>
-    <a class="version is-missing" href="../../0.2.9/index.html">0.2.9</a>
-    <a class="version is-missing" href="../../0.2.8/index.html">0.2.8</a>
-    <a class="version is-missing" href="../../0.2.7/index.html">0.2.7</a>
-    <a class="version is-missing" href="../../0.2.6/index.html">0.2.6</a>
-    <a class="version is-missing" href="../../0.2.5/index.html">0.2.5</a>
-    <a class="version is-missing" href="../../0.2.4/index.html">0.2.4</a>
   </div>
 </div>
   <div class="edit-this-page"><a href="https://github.com/vividus-framework/vividus/edit/master/docs/modules/plugins/pages/plugin-websocket.adoc">Edit this Page</a></div>
@@ -535,11 +584,23 @@
 <div class="sect1">
 <h2 id="_installation"><a class="anchor" href="#_installation"></a>Installation</h2>
 <div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Copy the below line to <code>dependencies</code> section of the project <code>build.gradle</code> file</p>
 <div class="listingblock">
 <div class="title">Example 1. build.gradle</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation(group: 'org.vividus', name: 'vividus-plugin-websocket', version: '0.4.1-SNAPSHOT')</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation(group: 'org.vividus', name: 'vividus-plugin-websocket', version: '0.5.3-SNAPSHOT')</code></pre>
 </div>
+</div>
+</li>
+<li>
+<p>If the project was imported to the IDE before adding new plugin,
+<a href="../getting-started.html#_use_ide_for_the_tests_development" class="xref page">re-generate</a>
+the configuration files for the used IDE and then refresh the project in the used IDE.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -657,7 +718,7 @@ websocket.connection.debug=ws://localhost:54886/</code></pre>
 <p><code>$webSocketConnectionKey</code> - the websocket connection key</p>
 </li>
 <li>
-<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="page">the comparison rule</a></p>
+<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="xref page">the comparison rule</a></p>
 </li>
 <li>
 <p><code>$expectedCount</code> - the expected count of the messages to be matched by the rule</p>
@@ -687,7 +748,7 @@ websocket.connection.debug=ws://localhost:54886/</code></pre>
 <p><code>$webSocketConnectionKey</code> - the websocket connection key</p>
 </li>
 <li>
-<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="page">The comma-separated set of the variables scopes</a>.</p>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
 </li>
 <li>
 <p><code>$variableName</code> - the variable name to store the messages. The messages are accessible via zero-based index, e.g. <code>${my-var[0]}</code> will return the first received message.</p>
@@ -711,10 +772,10 @@ Then `${messages[0]}` is equal to `Hi Jetty`</code></pre>
 <footer class="footer" style="padding: 0.25rem">
   <p>Copyright (C) 2019-2022 VIVIDUS team and individual contributors to <a href="https://docs.vividus.dev">VIVIDUS</a>. VIVIDUS is licensed under the <a href="https://github.com/vividus-framework/vividus/blob/master/LICENSE">Apache License 2.0</a></p>
 </footer>
-<script src="../../../_/js/site.js"></script>
-<script src="../../../_/js/vendor/lunr.js"></script>
-<script src="../../../_/js/vendor/search.js" id="search-script" data-base-path="../../.." data-page-path="/vividus/latest/plugins/plugin-websocket.html"></script>
-<script async src="../../../_/../search-index.js"></script>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+  <script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
 <script src="../../../_/js/vendor/highlight.min.js"></script>
 <script charset="UTF-8" src="../../../_/js/vendor/gherkin.min.js"></script>
 <script charset="UTF-8" src="../../../_/js/vendor/gradle.min.js"></script>

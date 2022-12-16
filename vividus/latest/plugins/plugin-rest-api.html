@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>REST API Plugin :: VIVIDUS</title>
     <link rel="canonical" href="https://docs.vividus.dev/vividus/latest/plugins/plugin-rest-api.html">
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
@@ -13,9 +13,8 @@
 <link rel="manifest" href="../../../site.webmanifest">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-<script src="https://buttons.github.io/buttons.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 <link rel="stylesheet" href="../../../_/css/additional.css">
-<link rel="stylesheet" href="../../../_/css/search.css">
     <script>var uiRootPath = '../../../_'</script>
   </head>
   <body class="article">
@@ -25,8 +24,10 @@
          <div class="navbar-item">
             <a href="https://github.com/vividus-framework/vividus">VIVIDUS // Docs</a>
          </div>
-           <div class="navbar-item">
-             <input id="search-input" type="text" placeholder="Search docs">
+           <div class="navbar-item search hide-for-print">
+             <div id="search-field" class="field">
+               <input id="search-input" type="text" placeholder="Search the docs">
+             </div>
            </div>
          <button class="navbar-burger" data-target="topbar-nav">
          <span></span>
@@ -66,7 +67,7 @@
                </div>
             </div>
             <div class="navbar-item">
-              <a href="https://vividus-support.herokuapp.com/">
+              <a href="https://vividus-support.vercel.app/">
                 <span class="icon">
                   <svg fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                      <g stroke-width=".790123">
@@ -125,7 +126,16 @@
     <a class="nav-link" href="../glossary.html">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../tests-configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../reporting.html">Reporting</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -144,6 +154,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../commons/table-transformers.html">Table Transformers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../commons/cli.html">CLI</a>
   </li>
 </ul>
   </li>
@@ -178,6 +191,9 @@
     <a class="nav-link" href="azure.html">Azure</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="plugin-azure-resource-manager.html">Resource Manager</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="plugin-azure-cosmos-db.html">Cosmos DB</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -191,6 +207,12 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="plugin-azure-functions.html">Functions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="plugin-azure-key-vault.html">Key Vault</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="plugin-azure-sql-db.html">SQL Database</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="plugin-azure-storage-account.html">Storage Account</a>
@@ -216,16 +238,31 @@
     <a class="nav-link" href="plugin-excel.html">Excel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="plugin-html.html">HTML*</a>
+    <a class="nav-link" href="plugin-html.html">HTML</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="plugin-json.html">JSON</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="plugin-parquet.html">Parquet*</a>
+    <a class="nav-link" href="plugin-parquet.html">Parquet</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="plugin-xml.html">XML*</a>
+    <a class="nav-link" href="plugin-xml.html">XML</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-yaml.html">YAML</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Remoting</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-ssh.html">SSH</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-winrm.html">WinRM</a>
   </li>
 </ul>
   </li>
@@ -235,6 +272,9 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="plugin-browserstack.html">BrowserStack</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-mobitru.html">Mobitru</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="plugin-lambda-test.html">LambdaTest</a>
@@ -251,13 +291,13 @@
     <a class="nav-link" href="plugin-accessibility.html">Accessibility</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="plugin-applitools.html">Applitools*</a>
+    <a class="nav-link" href="plugin-applitools.html">Applitools</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="plugin-datetime.html">Date/Time</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="plugin-electron.html">Electron*</a>
+    <a class="nav-link" href="plugin-electron.html">Electron</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="plugin-email.html">Email</a>
@@ -278,7 +318,7 @@
     <a class="nav-link" href="plugin-rest-api.html">REST API</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="plugin-ssh.html">SSH</a>
+    <a class="nav-link" href="plugin-shell.html">Shell</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="plugin-visual.html">Visual Testing</a>
@@ -367,6 +407,15 @@
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Mobile Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../user-guides/appium-setup.html">Appium Setup</a>
+  </li>
+</ul>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
@@ -374,7 +423,19 @@
     <span class="nav-text">Developer Guides</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../developer-guides/custom-plugins.html">Custom Plugins</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../developer-guides/extension-points.html">Extension points</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developer-guides/extensions.html">Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developer-guides/plugins.html">Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developer-guides/custom-modules.html">Custom modules</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -394,79 +455,70 @@
           <a href="../index.html">latest</a>
         </li>
         <li class="version">
+          <a href="../../0.5.2/index.html">0.5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../0.5.1/index.html">0.5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../0.5.0/index.html">0.5.0</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.16/index.html">0.4.16</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.15/index.html">0.4.15</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.14/index.html">0.4.14</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.13/index.html">0.4.13</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.12/index.html">0.4.12</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.11/index.html">0.4.11</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.10/index.html">0.4.10</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.9/index.html">0.4.9</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.8/index.html">0.4.8</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.7/index.html">0.4.7</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.6/index.html">0.4.6</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.5/index.html">0.4.5</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.4/index.html">0.4.4</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.3/index.html">0.4.3</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.2/index.html">0.4.2</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.1/index.html">0.4.1</a>
+        </li>
+        <li class="version">
           <a href="../../0.4.0/index.html">0.4.0</a>
         </li>
         <li class="version">
           <a href="../../0.3.12/index.html">0.3.12</a>
         </li>
         <li class="version">
-          <a href="../../0.3.11/index.html">0.3.11</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.10/index.html">0.3.10</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.9/index.html">0.3.9</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.8/index.html">0.3.8</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.7/index.html">0.3.7</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.6/index.html">0.3.6</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.5/index.html">0.3.5</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.4/index.html">0.3.4</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.3/index.html">0.3.3</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.2/index.html">0.3.2</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.1/index.html">0.3.1</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.0/index.html">0.3.0</a>
-        </li>
-        <li class="version">
           <a href="../../0.2.14/index.html">0.2.14</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.13/index.html">0.2.13</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.12/index.html">0.2.12</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.11/index.html">0.2.11</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.10/index.html">0.2.10</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.9/index.html">0.2.9</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.8/index.html">0.2.8</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.7/index.html">0.2.7</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.6/index.html">0.2.6</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.5/index.html">0.2.5</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.4/index.html">0.2.4</a>
         </li>
       </ul>
     </li>
@@ -490,31 +542,28 @@
   <button class="version-menu-toggle" title="Show other versions of page">latest</button>
   <div class="version-menu">
     <a class="version is-current" href="plugin-rest-api.html">latest</a>
+    <a class="version" href="../../0.5.2/plugins/plugin-rest-api.html">0.5.2</a>
+    <a class="version" href="../../0.5.1/plugins/plugin-rest-api.html">0.5.1</a>
+    <a class="version" href="../../0.5.0/plugins/plugin-rest-api.html">0.5.0</a>
+    <a class="version" href="../../0.4.16/plugins/plugin-rest-api.html">0.4.16</a>
+    <a class="version" href="../../0.4.15/plugins/plugin-rest-api.html">0.4.15</a>
+    <a class="version" href="../../0.4.14/plugins/plugin-rest-api.html">0.4.14</a>
+    <a class="version" href="../../0.4.13/plugins/plugin-rest-api.html">0.4.13</a>
+    <a class="version" href="../../0.4.12/plugins/plugin-rest-api.html">0.4.12</a>
+    <a class="version" href="../../0.4.11/plugins/plugin-rest-api.html">0.4.11</a>
+    <a class="version" href="../../0.4.10/plugins/plugin-rest-api.html">0.4.10</a>
+    <a class="version" href="../../0.4.9/plugins/plugin-rest-api.html">0.4.9</a>
+    <a class="version" href="../../0.4.8/plugins/plugin-rest-api.html">0.4.8</a>
+    <a class="version" href="../../0.4.7/plugins/plugin-rest-api.html">0.4.7</a>
+    <a class="version" href="../../0.4.6/plugins/plugin-rest-api.html">0.4.6</a>
+    <a class="version" href="../../0.4.5/plugins/plugin-rest-api.html">0.4.5</a>
+    <a class="version" href="../../0.4.4/plugins/plugin-rest-api.html">0.4.4</a>
+    <a class="version" href="../../0.4.3/plugins/plugin-rest-api.html">0.4.3</a>
+    <a class="version" href="../../0.4.2/plugins/plugin-rest-api.html">0.4.2</a>
+    <a class="version" href="../../0.4.1/plugins/plugin-rest-api.html">0.4.1</a>
     <a class="version" href="../../0.4.0/plugins/plugin-rest-api.html">0.4.0</a>
     <a class="version" href="../../0.3.12/plugins/plugin-rest-api.html">0.3.12</a>
-    <a class="version" href="../../0.3.11/plugins/plugin-rest-api.html">0.3.11</a>
-    <a class="version" href="../../0.3.10/plugins/plugin-rest-api.html">0.3.10</a>
-    <a class="version" href="../../0.3.9/plugins/plugin-rest-api.html">0.3.9</a>
-    <a class="version" href="../../0.3.8/plugins/plugin-rest-api.html">0.3.8</a>
-    <a class="version" href="../../0.3.7/plugins/plugin-rest-api.html">0.3.7</a>
-    <a class="version" href="../../0.3.6/plugins/plugin-rest-api.html">0.3.6</a>
-    <a class="version" href="../../0.3.5/plugins/plugin-rest-api.html">0.3.5</a>
-    <a class="version" href="../../0.3.4/plugins/plugin-rest-api.html">0.3.4</a>
-    <a class="version" href="../../0.3.3/plugins/plugin-rest-api.html">0.3.3</a>
-    <a class="version" href="../../0.3.2/plugins/plugin-rest-api.html">0.3.2</a>
-    <a class="version" href="../../0.3.1/plugins/plugin-rest-api.html">0.3.1</a>
-    <a class="version" href="../../0.3.0/plugins/plugin-rest-api.html">0.3.0</a>
     <a class="version" href="../../0.2.14/plugins/plugin-rest-api.html">0.2.14</a>
-    <a class="version" href="../../0.2.13/plugins/plugin-rest-api.html">0.2.13</a>
-    <a class="version" href="../../0.2.12/plugins/plugin-rest-api.html">0.2.12</a>
-    <a class="version" href="../../0.2.11/plugins/plugin-rest-api.html">0.2.11</a>
-    <a class="version" href="../../0.2.10/plugins/plugin-rest-api.html">0.2.10</a>
-    <a class="version" href="../../0.2.9/plugins/plugin-rest-api.html">0.2.9</a>
-    <a class="version" href="../../0.2.8/plugins/plugin-rest-api.html">0.2.8</a>
-    <a class="version" href="../../0.2.7/plugins/plugin-rest-api.html">0.2.7</a>
-    <a class="version" href="../../0.2.6/plugins/plugin-rest-api.html">0.2.6</a>
-    <a class="version" href="../../0.2.5/plugins/plugin-rest-api.html">0.2.5</a>
-    <a class="version" href="../../0.2.4/plugins/plugin-rest-api.html">0.2.4</a>
   </div>
 </div>
   <div class="edit-this-page"><a href="https://github.com/vividus-framework/vividus/edit/master/docs/modules/plugins/pages/plugin-rest-api.adoc">Edit this Page</a></div>
@@ -548,11 +597,23 @@
 <div class="sect1">
 <h2 id="_installation"><a class="anchor" href="#_installation"></a>Installation</h2>
 <div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Copy the below line to <code>dependencies</code> section of the project <code>build.gradle</code> file</p>
 <div class="listingblock">
 <div class="title">Example 1. build.gradle</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation(group: 'org.vividus', name: 'vividus-plugin-rest-api', version: '0.4.1-SNAPSHOT')</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation(group: 'org.vividus', name: 'vividus-plugin-rest-api', version: '0.5.3-SNAPSHOT')</code></pre>
 </div>
+</div>
+</li>
+<li>
+<p>If the project was imported to the IDE before adding new plugin,
+<a href="../getting-started.html#_use_ide_for_the_tests_development" class="xref page">re-generate</a>
+the configuration files for the used IDE and then refresh the project in the used IDE.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -593,7 +654,7 @@
 </tbody>
 </table>
 <div class="paragraph">
-<p>See <a href="../tests-configuration.html#_http_configuration" class="page">HTTP configuration</a> for more fine-grained control over the HTTP interactions.</p>
+<p>See <a href="../tests-configuration.html#_http_configuration" class="xref page">HTTP configuration</a> for more fine-grained control over the HTTP interactions.</p>
 </div>
 </div>
 </div>
@@ -795,8 +856,314 @@ are otherwise illegal within the given URI component type, as defined in
 </div>
 </div>
 <div class="sect1">
+<h2 id="_dynamic_variables"><a class="anchor" href="#_dynamic_variables"></a><a href="../commons/variables.html" class="xref page">Dynamic variables</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_http_response_as_text"><a class="anchor" href="#_http_response_as_text"></a>HTTP response as text</h3>
+<div class="paragraph">
+<p>The variable provides the HTTP response body of the latest executed HTTP call as
+string.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">${response}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 3. Validate the HTTP response matches the regular expression</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I send HTTP GET to the relative URL '/get?name=Content'
+Then `${response}` matches `.+Home.+`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_http_response_as_binary_data"><a class="anchor" href="#_http_response_as_binary_data"></a>HTTP response as binary data</h3>
+<div class="paragraph">
+<p>The variable provides the HTTP response body of the latest executed HTTP call as
+binary data.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">${response-as-bytes}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 4. Save the received Excel document into the temporary folder</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://github.com/vividus-framework/vividus/blob/master/vividus-plugin-excel/src/test/resources/TestTemplate.xlsx?raw=true`
+When I create temporary file with name `excel` and content `${response-as-bytes}` and put path to scenario variable `excelPath`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_http_response_code"><a class="anchor" href="#_http_response_code"></a>HTTP response code</h3>
+<div class="paragraph">
+<p>The variable provides the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response status code</a> of the latest executed HTTP call.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">${response-code}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 5. Validate the HTTP response code</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I send HTTP GET to the relative URL '/get?name=Content'
+Then `${response-code}` is equal to `200`</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_table_transformers"><a class="anchor" href="#_table_transformers"></a><a href="../glossary.html#_table_transformer" class="xref page">Table Transformers</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_from_json"><a class="anchor" href="#_from_json"></a>FROM_JSON</h3>
+<div class="paragraph">
+<p><code>FROM_JSON</code> transformer constructs a table by mapping table columns to values found by <a href="https://github.com/json-path/JsonPath#path-examples">JSON Paths</a> in the source JSON.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>variable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the variable containing source JSON, only variables of scopes <code>global</code> and <code>next_batches</code> are allowed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URL of the JSON resource that can be retrieved using the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET">HTTP GET</a> call.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">columns</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The semicolon-separated list of mappings between column names and <a href="https://github.com/json-path/JsonPath#path-examples">JSON Paths</a> used to get column values.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 6. Columns parameter format</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">columns=column_name_1=json_path_1;column_name_2=json_path_2;column_name_N=json_path_N</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>column_name</code> - The user-defined column name in the resulting table.</p>
+</li>
+<li>
+<p><code>json_path</code> - The json path used to retrieve a value from the source JSON for a particular column name.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The number of elements found by the <a href="https://github.com/json-path/JsonPath#path-examples">JSON Paths</a> for each column must be the same.
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<code>variable</code> and <code>url</code> are competing parameters and only one can be specified at the same time.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Example 7. Source JSON</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+    {
+        "firstName": "Cheryl",
+        "lastName": "Wilkerson",
+        "age": 36,
+        "address": {
+            "streetAddress": "690 Selah Way",
+            "city": "Waitsfield",
+            "postalCode": "05673"
+        }
+    },
+    {
+        "firstName": "Zachary",
+        "lastName": "Harrington",
+        "age": 63,
+        "address": {
+            "streetAddress": "4803 Duncan Avenue",
+            "city": "New York",
+            "postalCode": "10014"
+        }
+    }
+]</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 8. Usage of FROM_JSON transformer</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given request body: {
+  "fullName": "&lt;fname&gt; &lt;lname&gt;"
+}
+When I execute HTTP POST request for resource with URL `https://service-under-test.com/register`
+Examples:
+{transformer=FROM_JSON, url=https://data-provider/users, columns=fname=$..firstName;lname=$..lastName}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_http_steps"><a class="anchor" href="#_http_steps"></a>HTTP Steps</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_set_http_request_configuration"><a class="anchor" href="#_set_http_request_configuration"></a>Set HTTP request configuration</h3>
+<div class="paragraph">
+<p>Set up custom request configuration.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I set HTTP request configuration:$configItems</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$configItems</code> - Table representing list of configuration items with columns "name" and "value" specifying their names and values respectively.</p>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Available configs</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Config</th>
+<th class="tableblock halign-left valign-top">Acceptable values</th>
+<th class="tableblock halign-left valign-top">Request config default value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>expectContinueEnabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the '<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/100">Expect: 100-Continue</a>' handshake is enabled</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>staleConnectionCheckEnabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether stale connection check is to be used</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redirectsEnabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether redirects should be handled automatically</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>relativeRedirectsAllowed</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether relative redirects should be rejected</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>circularRedirectsAllowed</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether "circular redirects" (redirects to the same location) should be allowed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>authenticationEnabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether authentication should be handled automatically</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contentCompressionEnabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the target server is requested to compress content</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>normalizeUri</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether client should normalize URIs in requests or not</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxRedirects</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>50</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The maximum number of redirects to be followed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>connectionRequestTimeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The timeout in milliseconds used when requesting a connection from the connection manager</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>socketTimeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The socket timeout in milliseconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>socketTimeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The socket timeout in milliseconds, which is the timeout for waiting for data or, put differently, a maximum period inactivity between two consecutive data packets</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cookieSpec</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>null</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the cookie specification to be used for HTTP state management</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>* <code>-1</code> means "infinity"</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 9. Load a page with slow connection and with the property <code>http.socket-timeout</code> set to <code>15000</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I set HTTP request configuration:
+|socketTimeout |
+|25000         |
+When I execute HTTP GET request for resource with URL `https://vividus-test-site.onrender.com/?pageTimeout=20000`
+Then '${responseStatusCode}' is = '200'</code></pre>
+</div>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_set_http_request_body"><a class="anchor" href="#_set_http_request_body"></a>Set HTTP request body</h3>
 <div class="paragraph">
@@ -828,13 +1195,13 @@ No HTTP request header is set in the case of binary content.
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 3. Set textual HTTP request body</div>
+<div class="title">Example 10. Set textual HTTP request body</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given request body: Hello!</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 4. Set binary HTTP request body</div>
+<div class="title">Example 11. Set binary HTTP request body</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given request body: #{loadBinaryResource(/data/image.png)}
 When I set request headers:
@@ -855,7 +1222,7 @@ When I send HTTP POST to the relative URL '/upload/png'</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>where <code>requestParts</code> is <code>ExamplesTable</code> representing the list of the request parts with the following columns:</p>
+<p>where <code>requestParts</code> is <a href="../glossary.html#_examplestable" class="xref page">ExamplesTable</a> representing the list of the request parts with the following columns:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -870,7 +1237,7 @@ When I send HTTP POST to the relative URL '/upload/png'</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>For <code>FILE</code> part type - the <a href="../glossary.html#_resource" class="page">resource name</a> or the file path.</p>
+<p>For <code>FILE</code> part type - the <a href="../glossary.html#_resource" class="xref page">resource name</a> or the file path.</p>
 </li>
 <li>
 <p>For <code>STRING</code> or <code>BINARY</code> part type - the actual content.</p>
@@ -888,9 +1255,9 @@ parameter is not allowed for <code>STRING</code> part type, but it&#8217;s requi
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 5. Init HTTP request consisting of 4 different parts</div>
+<div class="title">Example 12. Init HTTP request consisting of 4 different parts</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I initialize the scenario variable `temp-file-content` with value `Your first and last stop for No-Code Test Automation!`
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given I initialize scenario variable `temp-file-content` with value `Your first and last stop for No-Code Test Automation!`
 When I create temporary file with name `abc.txt` and content `${temp-file-content}` and put path to scenario variable `temp-file-path`
 Given multipart request:
 |type  |name      |value            |contentType|fileName       |
@@ -898,6 +1265,36 @@ Given multipart request:
 |file  |file-key2 |${temp-file-path}|text/plain |               |
 |string|string-key|string1          |text/plain |               |
 |binary|binary-key|raw              |text/plain |raw.txt        |</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_set_form_data_http_request"><a class="anchor" href="#_set_form_data_http_request"></a>Set form data HTTP request</h3>
+<div class="paragraph">
+<p>Sets <a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1">URL-encoded form data</a> request entity that will be used while executing HTTP requests.
+Default HTTP request header with name <code>Content-Type</code> and value <code>application/x-www-form-urlencoded; charset=UTF-8</code> is set.
+In case if <code>Content-Type</code> is <code>text/plain</code> <a href="#_set_http_request_body">Set HTTP request body</a> should be used</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given form data request:$parameters</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$parameters</code> -  The <a href="../glossary.html#_examplestable" class="xref page">ExamplesTable</a> representing list of parameters with columns <code>name</code> and <code>value</code> specifying form data request.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 13. Set form data HTTP request body</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given form data request:
+|name     |value  |
+|firstName|Ivan   |
+|lastName |Ivanov |
+|password |!@3qwer|</code></pre>
 </div>
 </div>
 </div>
@@ -914,12 +1311,12 @@ Given multipart request:
 <div class="ulist">
 <ul>
 <li>
-<p><code>headers</code> - <code>ExamplesTable</code> representing the list of the headers with columns <code>name</code> and <code>value</code> specifying HTTP header</p>
+<p><code>headers</code> - The <a href="../glossary.html#_examplestable" class="xref page">ExamplesTable</a> representing the list of the headers with columns <code>name</code> and <code>value</code> specifying HTTP header</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 6. Add request header with name Accept-Language and value en-ru</div>
+<div class="title">Example 14. Add request header with name Accept-Language and value en-ru</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I add request headers:
 |name           |value |
@@ -930,7 +1327,361 @@ Then a JSON element by the JSON path '$.headers.Accept-Language' is equal to '"e
 </div>
 </div>
 <div class="sect2">
+<h3 id="_execute_http_request_with_absolute_url"><a class="anchor" href="#_execute_http_request_with_absolute_url"></a>Execute HTTP request with absolute URL</h3>
+<div class="paragraph">
+<p>Executes the HTTP request for a resource identified by the absolute URL. The step uses previously set HTTP headers
+and request body. The HTTP response headers, status code and body can be accessed by the corresponding steps and
+dynamic variables.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP $httpMethod request for resource with URL `$url`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$httpMethod</code> - The <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP method</a>.</p>
+</li>
+<li>
+<p><code>$url</code> - The URL of the resource on the server.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 15. Execute HTTP GET request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://example.com`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_execute_http_request_with_relative_url"><a class="anchor" href="#_execute_http_request_with_relative_url"></a>Execute HTTP request with relative URL</h3>
+<div class="paragraph">
+<p>Executes the HTTP request for a resource identified by the URL relative to the base URL specified by the <code>rest-api.http.endpoint</code>
+property. The step uses previously set HTTP headers and request body. The HTTP response headers, status code and body can be
+accessed via the corresponding steps and dynamic variables.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP $httpMethod request for resource with relative URL `$relativeURL`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$httpMethod</code> - The <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP method</a>.</p>
+</li>
+<li>
+<p><code>$relativeURL</code> - The relative URL of the resource on the server.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 16. Configuration</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">rest-api.http.endpoint=https://httpbin.org</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 17. Execute HTTP GET request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with relative URL `/image/jpeg`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_compare_http_response_body_against_resource"><a class="anchor" href="#_compare_http_response_body_against_resource"></a>Compare HTTP response body against resource</h3>
+<div class="paragraph">
+<p>Compares the HTTP response body against the <a href="../glossary.html#_resource" class="xref page">resource</a> data according to the provided rule.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then response body $validationRule resource at `$resourcePath`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$validationRule</code> - The validation rule, either <code>is equal to</code> or <code>is not equal to</code>.</p>
+</li>
+<li>
+<p><code>$resourcePath</code> - The <a href="../glossary.html#_resource" class="xref page">resource</a> path.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 18. Compare images</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://httpbin.org/image/png`
+Then response body is equal to resource at `/images/pig.png`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validate_http_response_code"><a class="anchor" href="#_validate_http_response_code"></a>Validate HTTP response code</h3>
+<div class="paragraph">
+<p>Compares the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response status code</a> against the expected number.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then response code is $comparisonRule `$responseCode`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="xref page">The comparison rule</a>.</p>
+</li>
+<li>
+<p><code>$responseCode</code> - The expected <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response status code</a>.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 19. Validate the resource is not found</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://httpbin.org/cfa2fdbc`
+Then response code is equal to `404`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validate_http_response_time"><a class="anchor" href="#_validate_http_response_time"></a>Validate HTTP response time</h3>
+<div class="paragraph">
+<p>Compares the HTTP response time against the expected number in milliseconds.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then response time is $comparisonRule `$responseTime` milliseconds</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="xref page">The comparison rule</a>.</p>
+</li>
+<li>
+<p><code>$responseTime</code> - The expected response time in milliseconds.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 20. Check HTTP response time</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://example.com`
+Then response time is less than `1000` milliseconds</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_valdate_number_of_http_response_headers"><a class="anchor" href="#_valdate_number_of_http_response_headers"></a>Valdate number of HTTP response headers</h3>
+<div class="paragraph">
+<p>Validates the number of HTTP response headers filtered by the specified name.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of response headers with name `$headerName` is $comparisonRule $number</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$headerName</code> - The <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Response_fields">HTTP response header</a> name.</p>
+</li>
+<li>
+<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="xref page">The comparison rule</a>.</p>
+</li>
+<li>
+<p><code>$number</code> - The expected number of headers.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 21. Check the browser is forced to use a secure web connection</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of response headers with name `Strict-Transport-Security` is equal to 1</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validate_http_response_header_value"><a class="anchor" href="#_validate_http_response_header_value"></a>Validate HTTP response header value</h3>
+<div class="paragraph">
+<p>Compares the header value against the expected value according to the comparison rule.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then value of response header `$headerName` $comparisonRule `$value`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$headerName</code> - The <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Response_fields">HTTP response header</a> name.</p>
+</li>
+<li>
+<p><code>$comparisonRule</code> - <a href="../parameters/string-comparison-rule.html" class="xref page">The string comparison rule</a>.</p>
+</li>
+<li>
+<p><code>$number</code> - The expected HTTP header value.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 22. Check HTTP response content type</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://httpbin.org/robots.txt`
+Then value of response header `Content-Type` is equal to `text/plain`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validate_http_response_header_elements"><a class="anchor" href="#_validate_http_response_header_elements"></a>Validate HTTP response header elements</h3>
+<div class="paragraph">
+<p>Validates that the response header with the specified name contains elements. Might be useful to verify such HTTP
+headers as <code>Set-Cookie</code> that have values that can be decomposed into multiple elements.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 23. HTTP header with elements format</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">header = [ element ] *( "," [ element ] )</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then response header `$headerName` contains elements:$elements</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$headerName</code> - The <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Response_fields">HTTP response header</a> name.</p>
+</li>
+<li>
+<p><code>$attributes</code> - The <a href="../glossary.html#_examplestable" class="xref page">ExamplesTable</a> with expected elements.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 24. Check attributes of Set-Cookie header</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://httpbin.org/authenticate`
+Then response header `Set-Cookie` contains elements:
+|element |
+|JSESSION|
+|clientId|</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_save_http_response_header_value"><a class="anchor" href="#_save_http_response_header_value"></a>Save HTTP response header value</h3>
+<div class="paragraph">
+<p>Saves the HTTP response header value into a variable.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save response header `$headerName` value to $scopes variable `$variableName`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$headerName</code> - The <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Response_fields">HTTP response header</a> name.</p>
+</li>
+<li>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
+</li>
+<li>
+<p><code>$variableName</code> - The variable name to store the header value.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 25. Save Content-Length header value</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://httpbin.org/brotli`
+When I save response header `Content-Length` value to scenario variable `length`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validate_connection_security"><a class="anchor" href="#_validate_connection_security"></a>Validate connection security</h3>
+<div class="paragraph">
+<p>Validates that the HTTP connection is secured with the defined security protocol.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then connection is secured using $securityProtocol protocol</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$securityProtocol</code> - The expected security protocol, e.g. <code>TLSv1.2</code>, <code>TLSv1.3</code></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 26. Check that the httpbin is secured</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://httpbin.org/`
+Then connection is secured using TLSv1.2 protocol</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_wait_for_json_element_in_the_http_response"><a class="anchor" href="#_wait_for_json_element_in_the_http_response"></a>Wait for JSON element in the HTTP response</h3>
+<div class="paragraph">
+<p>Waits for a specified amount of time until HTTP response body contains an element by the specified JSON path. The actions of the step:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Execute sub-steps.</p>
+</li>
+<li>
+<p>Check if the HTTP response is present and the response body contains an element by JSON path.</p>
+</li>
+<li>
+<p>If the required JSON element exists or the maximum number of retries is reached, then the execution stops, otherwise the step actions are repeated.</p>
+</li>
+<li>
+<p>Stop step execution if HTTP response is not present or JSON element is found, otherwise sleep for the calculated part of specified duration and repeat actions from the start.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait for presence of element by `$jsonPath` for `$duration` duration retrying $retryTimes times$stepsToExecute</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$jsonPath</code> - The JSON path of the element to find.</p>
+</li>
+<li>
+<p><code>$duration</code> - The time duration to wait in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a> format.</p>
+</li>
+<li>
+<p><code>$retryTimes</code> -  The maximum of attempts. <code>duration/retryTimes = timeout</code> is a polling timeout between requests.</p>
+</li>
+<li>
+<p><code>$stepsToExecute</code> - The sub-steps to execute at each iteration.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 27. Wait for presence of element 10 times with polling timeout between requests 5 seconds</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait for presence of element by `$.unstableElement` for `PT50S` duration retrying 10 times
+|step                                                                                    |
+|When I execute HTTP GET request for resource with URL `http://example.com/testing-page` |</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wait_for_json_element_in_the_http_response_with_polling_interval"><a class="anchor" href="#_wait_for_json_element_in_the_http_response_with_polling_interval"></a>Wait for JSON element in the HTTP response with polling interval</h3>
 <div class="paragraph">
 <p>Executes the provided sub-steps until the HTTP response body contains an element by the specified JSON path or the maximum number of retries is reached. The maximum duration of the step execution is not limited. The actions of the step:</p>
 </div>
@@ -969,7 +1720,7 @@ Then a JSON element by the JSON path '$.headers.Accept-Language' is equal to '"e
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 7. Wait for presence of element by JSON path $.data.testData</div>
+<div class="title">Example 28. Wait for presence of element by JSON path $.data.testData</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait for presence of element by `$.data.testData` with `PT5S` polling interval retrying 10 times
 |step                                  |
@@ -977,7 +1728,7 @@ Then a JSON element by the JSON path '$.headers.Accept-Language' is equal to '"e
 |{headerSeparator=!,valueSeparator=!}  |
 |!name          !value                !|
 |!Authorization !${accessToken}       !|
-|When I issue a HTTP GET request for a resource with the URL '${requestUrl}'|</code></pre>
+|When I execute HTTP GET request for resource with URL `${requestUrl}`|</code></pre>
 </div>
 </div>
 </div>
@@ -997,7 +1748,7 @@ Then a JSON element by the JSON path '$.headers.Accept-Language' is equal to '"e
 <p><code>$hostname</code> - the server hostname</p>
 </li>
 <li>
-<p><code>$rule</code> - <a href="../parameters/collection-comparison-rule.html" class="page">the collection comparison rule</a></p>
+<p><code>$rule</code> - <a href="../parameters/collection-comparison-rule.html" class="xref page">the collection comparison rule</a></p>
 </li>
 <li>
 <p><code>$protocols</code> - the secure protocols that are expected to match specified <code>$rule</code></p>
@@ -1005,369 +1756,155 @@ Then a JSON element by the JSON path '$.headers.Accept-Language' is equal to '"e
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 8. Validate the server supports TLSv1.2 and TLSv1.3 protocols</div>
+<div class="title">Example 29. Validate the server supports TLSv1.2 and TLSv1.3 protocols</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then server `vividus-test-site.herokuapp.com` supports secure protocols that contain `TLSv1.2,TLSv1.3`</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_json_steps"><a class="anchor" href="#_json_steps"></a>JSON Steps</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_verify_context_contains_data"><a class="anchor" href="#_verify_context_contains_data"></a>Verify context contains data</h3>
-<div class="paragraph">
-<p>Checks if the JSON context contains an expected data by a JSON path</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then JSON element by JSON path `$jsonPath` is equal to `$expectedData`$options</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
-</li>
-<li>
-<p><code>expectedData</code> - expected JSON</p>
-</li>
-<li>
-<p><code>options</code> - <a href="https://github.com/lukas-krecan/JsonUnit/blob/master/README.md#options">options</a></p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Example 9. Check JSON context contains JSON object by JSON path</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then JSON element by JSON path `$.accountList[0]` is equal to `
-{
-  "accountId": 12345,
-  "accountName": "${json-unit.any-string}",
-  "status": "Active"
-}
-`ignoring extra fields</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then server `vividus-test-site.onrender.com` supports secure protocols that contain `TLSv1.2,TLSv1.3`</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_verify_json_contains_data"><a class="anchor" href="#_verify_json_contains_data"></a>Verify JSON contains data</h3>
+<h3 id="_wait_for_expected_http_status_code_in_response"><a class="anchor" href="#_wait_for_expected_http_status_code_in_response"></a>Wait for expected HTTP status code in response</h3>
 <div class="paragraph">
-<p>Checks if a JSON contains an expected data by a JSON path</p>
+<p>Waits for the specified number of times until HTTP response code is equal to the expected one. In case if the expected code is not returned after all retries, the assertion error will be recorded.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then JSON element from `$json` by JSON path `$jsonPath` is equal to `$expectedData`$options</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait for response code $responseCode for $duration duration retrying $retryTimes times$stepsToExecute</code></pre>
 </div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>json</code> - input JSON</p>
+<p><code>$responseCode</code> - The expected HTTP status code.</p>
 </li>
 <li>
-<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
+<p><code>$duration</code> - The time duration to wait in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a> format.</p>
 </li>
 <li>
-<p><code>expectedData</code> - expected JSON</p>
+<p><code>$retryTimes</code> - The number of times the request will be retried: <code>duration/retryTimes = timeout</code> is a polling timeout between requests.</p>
 </li>
 <li>
-<p><code>options</code> - <a href="https://github.com/lukas-krecan/JsonUnit/blob/master/README.md#options">options</a></p>
+<p><code>$stepsToExecute</code> - The steps to execute at each wait iteration.</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 10. Check JSON contains string value by JSON path</div>
+<div class="title">Example 30. Wait until HTTP GET request returns status code 200</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then JSON element from `
-{
-  "accountId": 12345,
-  "status": "Active"
-}
-` by JSON path `$.status` is equal to `Active`</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait for response code `200` for `PT10S` duration retrying 3 times
+|step                                                        |
+|When I send HTTP GET to the relative URL '/delayed-resource'|</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_verify_number_of_elements_in_context"><a class="anchor" href="#_verify_number_of_elements_in_context"></a>Verify number of elements in context</h3>
+<h3 id="_validate_content_type_of_response_body"><a class="anchor" href="#_validate_content_type_of_response_body"></a>Validate content type of response body</h3>
 <div class="paragraph">
-<p>Verifies that the number of elements found in the JSON context by a JSON path matches an expected number according to specified comparison rule</p>
+<p>Checks content type of HTTP response body matches to the specified expected <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">content type</a> according to the provided string validation rule.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of JSON elements by JSON path `$jsonPath` is $comparisonRule $elementsNumber</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then content type of response body $comparisonRule `$contentType`</code></pre>
 </div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
+<p><code>$comparisonRule</code> - <a href="../parameters/string-comparison-rule.html" class="xref page">String validation rule</a>.</p>
 </li>
 <li>
-<p><code>comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="page">comparison rule</a></p>
-</li>
-<li>
-<p><code>elementsNumber</code> - expected elements number</p>
+<p><code>$contentType</code> – Expected <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">content type</a>, e.g. <code>text/html</code>, <code>application/xml</code>, <code>application/json</code>.</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 11. Number of account lists in JSON is less than 5</div>
+<div class="title">Example 31. Submit a GET request and check that response body type is <code>application/json</code></div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of JSON elements by JSON path `$.accountList` is equal to 2</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://httpbin.org/json`
+Then content type of response body is equal to `application/json`</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_verify_number_of_elements_in_json"><a class="anchor" href="#_verify_number_of_elements_in_json"></a>Verify number of elements in JSON</h3>
+<h3 id="_validate_absence_of_response_body"><a class="anchor" href="#_validate_absence_of_response_body"></a>Validate absence of response body</h3>
 <div class="paragraph">
-<p>Verifies that the number of elements found in JSON data by a JSON path matches an expected number according to specified comparison rule</p>
+<p>Validates that the HTTP response does not contain a body.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of JSON elements from `$json` by JSON path `$jsonPath` is $comparisonRule $elementsNumber</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then response does not contain body</code></pre>
 </div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>json</code> - JSON data</p>
-</li>
-<li>
-<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
-</li>
-<li>
-<p><code>comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="page">comparison rule</a></p>
-</li>
-<li>
-<p><code>elementsNumber</code> - expected elements number</p>
-</li>
-</ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 12. Number of account lists in JSON is equal to 2</div>
+<div class="title">Example 32. Submit a POST request and check that response body is absent</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of JSON elements from `
-[
-  {
-    "accountId": 843
-  },
-  {
-    "accountId": 233
-  }
-]
-` by JSON path `$..accountId` is equal to 2</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP POST request for resource with URL `https://httpbin.org/json`
+Then response does not contain body</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_save_element_from_context"><a class="anchor" href="#_save_element_from_context"></a>Save element from context</h3>
+<h3 id="_validate_size_of_response_body"><a class="anchor" href="#_validate_size_of_response_body"></a>Validate size of response body</h3>
 <div class="paragraph">
-<p>Saves value extracted from the JSON context into a variable with specified name</p>
+<p>Compare size of decompressed HTTP response body with the specified expected size in bytes.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save JSON element from context by JSON path `$jsonPath` to $scopes variable `$variableName`</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then size of decompressed response body is $comparisonRule `$sizeInBytes`</code></pre>
 </div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
+<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="xref page">The comparison rule</a>.</p>
 </li>
 <li>
-<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="page">The comma-separated set of the variables scopes</a>.</p>
-</li>
-<li>
-<p><code>$variableName</code> - the variable name</p>
+<p><code>$sizeInBytes</code> - The expected size of the response body in bytes.</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 13. Save accountId element from JSON context</div>
+<div class="title">Example 33. Submit a GET request and check that response body size is greater or equal to <code>1200</code> bytes</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save JSON element from context by JSON path `$.accountId` to SCENARIO variable `account-id`</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://example.com`
+Then size of decompressed response body is greater than or equal to `1200`</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_save_element_from_json"><a class="anchor" href="#_save_element_from_json"></a>Save element from JSON</h3>
+<h3 id="_save_zip_archive_entries"><a class="anchor" href="#_save_zip_archive_entries"></a>Save ZIP archive entries</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Saves value extracted from a JSON data into a variable with specified name</p>
+<p>The step <a href="../commons/vividus-steps.html#_save_zip_archive_entries" class="xref page">is moved</a> to core package
+i.e. it&#8217;s not required to install any plugin to use this step - it&#8217;s available out of the box.</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save JSON element from `$json` by JSON path `$jsonPath` to $scopes variable `$variableName`</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>json</code> - JSON data</p>
-</li>
-<li>
-<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
-</li>
-<li>
-<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="page">The comma-separated set of the variables scopes</a>.</p>
-</li>
-<li>
-<p><code>$variableName</code> - the variable name</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Example 14. Save accountId element from JSON</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save JSON element from `
-{
-  "accountId": 12345,
-  "status": "Active"
-}
-` by JSON path `$.accountId` to SCENARIO variable `account-id`</code></pre>
-</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_save_number_of_elements_in_context"><a class="anchor" href="#_save_number_of_elements_in_context"></a>Save number of elements in context</h3>
+<h3 id="_validate_zip_archive"><a class="anchor" href="#_validate_zip_archive"></a>Validate ZIP archive</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Saves number of elements found in the JSON context by JSON path into a variable</p>
+<p>The step <a href="../commons/vividus-steps.html#_validate_zip_archive" class="xref page">is moved</a> to core package
+i.e. it&#8217;s not required to install any plugin to use this step - it&#8217;s available out of the box.</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I set number of elements found by JSON path `$jsonPath` to $scopes variable `$variableName`</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
-</li>
-<li>
-<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="page">The comma-separated set of the variables scopes</a>.</p>
-</li>
-<li>
-<p><code>$variableName</code> - the variable name</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Example 15. Save number of id elements</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I set number of elements found by JSON path `$..id` to scenario variable `idsCount`</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_save_number_of_elements_from_json"><a class="anchor" href="#_save_number_of_elements_from_json"></a>Save number of elements from JSON</h3>
-<div class="paragraph">
-<p>Saves number of elements found in the JSON by JSON path into a variable</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save number of elements from `$json` found by JSON path `$jsonPath` to $scopes variable `$variableName`</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>json</code> - JSON data</p>
-</li>
-<li>
-<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
-</li>
-<li>
-<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="page">The comma-separated set of the variables scopes</a>.</p>
-</li>
-<li>
-<p><code>$variableName</code> - the variable name</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Example 16. Save number of elements from the JSON</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save number of elements from `[{"key" : "passed"}, {"key" : "failed"}]` found by JSON path `$..[?(@.key == "failed")]` to scenario variable `messageCount`</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_perform_steps_on_elements_in_json"><a class="anchor" href="#_perform_steps_on_elements_in_json"></a>Perform steps on elements in JSON</h3>
-<div class="paragraph">
-<p>Performs steps against all elements found by JSON path in JSON data</p>
-</div>
-<div class="paragraph">
-<p>Actions performed by step:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>searches for elements using JSON path</p>
-</li>
-<li>
-<p>checks that elements quantity matches comparison rule and elements number</p>
-</li>
-<li>
-<p>passes if the comparison rule matches and the elements number is 0</p>
-</li>
-<li>
-<p>for each element switches JSON context and performs all steps. No steps will be performed in case of comparison rule mismatch</p>
-</li>
-<li>
-<p>restores previously set context</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I find $comparisonRule `$elementsNumber` JSON elements from `$json` by `$jsonPath` and for each element do$stepsToExecute</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="page">comparison rule</a></p>
-</li>
-<li>
-<p><code>elementsNumber</code> - expected number of elements</p>
-</li>
-<li>
-<p><code>json</code> - JSON data</p>
-</li>
-<li>
-<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
-</li>
-<li>
-<p><code>stepsToExecute</code> - steps to perform on JSON elements</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Example 17. Verify each account id is a number</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I find &gt; `0` JSON elements from `
-{
-  "accounts": [
-    {
-      "accountId": 00,
-      "status": "Active"
-    },
-    {
-      "accountId": 01,
-      "status": "Active"
-    },
-    {
-      "accountId": 10,
-      "status": "Active"
-    }
-  ]
-}
-` by `$.accounts.*` and for each element do
-|step                                                                                 |
-|Then number of JSON elements by JSON path `$[?(@.accountId =~ /\d+/i)]` is equal to 1|</code></pre>
-</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1393,7 +1930,7 @@ Then a JSON element by the JSON path '$.headers.Accept-Language' is equal to '"e
 <p>if the GET status code is <code>200</code> then check is considered as <code>passed</code>, otherwise <code>failed</code></p>
 </li>
 <li>
-<p>if the target URL had beed already checked then the check is considered as <code>skipped</code></p>
+<p>if the target URL has already been checked then the check is considered as <code>skipped</code></p>
 </li>
 </ul>
 </div>
@@ -1410,12 +1947,428 @@ Then a JSON element by the JSON path '$.headers.Accept-Language' is equal to '"e
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 18. Verify HTTP resources</div>
+<div class="title">Example 34. Verify HTTP resources</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then HTTP resources are valid:
-|url                                                    |
-|https://saucelabs.com                                  |
-|https://vividus-test-site.herokuapp.com/img/vividus.png|</code></pre>
+|url                                                   |
+|https://saucelabs.com                                 |
+|https://vividus-test-site.onrender.com/img/vividus.png|</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_http_cookie_steps"><a class="anchor" href="#_http_cookie_steps"></a>HTTP cookie steps</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_save_value_of_http_cookie"><a class="anchor" href="#_save_value_of_http_cookie"></a>Save value of HTTP cookie</h3>
+<div class="paragraph">
+<p>Saves cookie to scope variable. If present several cookies with the same name will be saved cookie with the root path value (path is '/').</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save value of HTTP cookie with name `$cookieName` to $scopes variable `$variableName`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$cookieName</code> - The name of cookie.</p>
+</li>
+<li>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
+</li>
+<li>
+<p><code>$variableName</code> - The name of variable.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 35. Get cookie with name <code>cookieName</code> and save its value to scenario variable <code>value</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://httpbin.org/cookies/set/cookieName/cookieValue`
+When I save value of HTTP cookie with name `cookieName` to scenario variable `value`
+Then '${value}' is equal to 'cookieValue'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_change_value_of_all_http_cookies"><a class="anchor" href="#_change_value_of_all_http_cookies"></a>Change value of all HTTP cookies</h3>
+<div class="paragraph">
+<p>Change cookie value. If several cookies with the same name exist in cookie store, the value will be changed for all of them.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I change value of all HTTP cookies with name `$cookieName` to `$newCookieValue`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$cookieName</code> - The name of cookie.</p>
+</li>
+<li>
+<p><code>$newCookieValue</code> - The new value for <code>$cookieName</code>.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 36. Get cookie with name <code>cookieName</code> and set new value for it <code>newCookieValue</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://httpbin.org/cookies/set/cookieName/cookieValue`
+When I change value of all HTTP cookies with name `cookieName` to `newCookieValue`
+When I save value of HTTP cookie with name `cookieName` to scenario variable `value`
+Then '${value}' is equal to 'newCookieValue'</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_json_steps"><a class="anchor" href="#_json_steps"></a>JSON Steps</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_verify_context_contains_data"><a class="anchor" href="#_verify_context_contains_data"></a>Verify context contains data</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The step is deprecated and will be removed in VIVIDUS 0.6.0. The replacement is
+the combination of the <a href="plugin-json.html#_json_context" class="xref page">dynamic variable</a> and the
+<a href="plugin-json.html#_validate_json_element" class="xref page">step validating the JSON element from the input</a>.
+The replacement pattern is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then JSON element from `${json-context}` by JSON path `&lt;jsonPath&gt;` is equal to `&lt;expectedData&gt;`&lt;options&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Checks if the JSON context contains an expected data by a JSON path</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then JSON element by JSON path `$jsonPath` is equal to `$expectedData`$options</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
+</li>
+<li>
+<p><code>expectedData</code> - expected JSON</p>
+</li>
+<li>
+<p><code>options</code> - <a href="https://github.com/lukas-krecan/JsonUnit/blob/master/README.md#options">options</a></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 37. Check JSON context contains JSON object by JSON path</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then JSON element by JSON path `$.accountList[0]` is equal to `
+{
+  "accountId": 12345,
+  "accountName": "${json-unit.any-string}",
+  "status": "Active"
+}
+`ignoring extra fields</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verify_json_contains_data"><a class="anchor" href="#_verify_json_contains_data"></a>Verify JSON contains data</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The step <a href="plugin-json.html#_validate_json_element" class="xref page">is moved</a> to <code>vividus-plugin-json</code>.
+The step is still available via <code>vividus-plugin-rest-api</code>, but it&#8217;ll be required
+to install <code>vividus-plugin-json</code> explicitly starting from VIVIDUS 0.6.0.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verify_number_of_elements_in_context"><a class="anchor" href="#_verify_number_of_elements_in_context"></a>Verify number of elements in context</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The step is deprecated and will be removed in VIVIDUS 0.6.0. The replacement is
+the combination of the <a href="plugin-json.html#_json_context" class="xref page">dynamic variable</a> and the
+<a href="plugin-json.html#_validate_number_of_json_elements" class="xref page">step validating the number of JSON elements from the input</a>.
+The replacement pattern is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of JSON elements from `${json-context}` by JSON path `&lt;jsonPath&gt;` is &lt;comparisonRule&gt; &lt;elementsNumber&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Verifies that the number of elements found in the JSON context by a JSON path matches an expected number according to specified comparison rule</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of JSON elements by JSON path `$jsonPath` is $comparisonRule $elementsNumber</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
+</li>
+<li>
+<p><code>comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="xref page">comparison rule</a></p>
+</li>
+<li>
+<p><code>elementsNumber</code> - expected elements number</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 38. Number of account lists in JSON is equal to 2</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of JSON elements by JSON path `$.accountList` is equal to 2</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verify_number_of_elements_in_json"><a class="anchor" href="#_verify_number_of_elements_in_json"></a>Verify number of elements in JSON</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The step <a href="plugin-json.html#_validate_number_of_json_elements" class="xref page">is moved</a>
+to <code>vividus-plugin-json</code>. The step is still available via <code>vividus-plugin-rest-api</code>,
+but it&#8217;ll be required to install <code>vividus-plugin-json</code> explicitly starting from VIVIDUS 0.6.0.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_save_element_from_context"><a class="anchor" href="#_save_element_from_context"></a>Save element from context</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The step is deprecated and will be removed in VIVIDUS 0.6.0. The replacement is
+the combination of the <a href="plugin-json.html#_json_context" class="xref page">dynamic variable</a> and the
+<a href="plugin-json.html#_save_json_element" class="xref page">step saving JSON element from the input</a>.
+The replacement pattern is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save JSON element from `${json-context}` by JSON path `&lt;jsonPath&gt;` to &lt;scopes&gt; variable `&lt;variableName&gt;`</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Saves value extracted from the JSON context into a variable with specified name</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save JSON element from context by JSON path `$jsonPath` to $scopes variable `$variableName`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
+</li>
+<li>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
+</li>
+<li>
+<p><code>$variableName</code> - the variable name</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 39. Save accountId element from JSON context</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save JSON element from context by JSON path `$.accountId` to SCENARIO variable `account-id`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_save_element_from_json"><a class="anchor" href="#_save_element_from_json"></a>Save element from JSON</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The step <a href="plugin-json.html#_save_json_element" class="xref page">is moved</a> to <code>vividus-plugin-json</code>.
+The step is still available via <code>vividus-plugin-rest-api</code>, but it&#8217;ll be required
+to install <code>vividus-plugin-json</code> explicitly starting from VIVIDUS 0.6.0.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_save_number_of_elements_in_context"><a class="anchor" href="#_save_number_of_elements_in_context"></a>Save number of elements in context</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The step is deprecated and will be removed in VIVIDUS 0.6.0. The replacement is
+the combination of the <a href="plugin-json.html#_json_context" class="xref page">dynamic variable</a> and the
+<a href="plugin-json.html#_save_number_of_json_elements" class="xref page">step saving the number of JSON elements from the input</a>.
+The replacement pattern is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save number of elements from `${json-context}` found by JSON path `&lt;jsonPath&gt;` to &lt;scopes&gt; variable `&lt;variableName&gt;`</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Saves number of elements found in the JSON context by JSON path into a variable</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I set number of elements found by JSON path `$jsonPath` to $scopes variable `$variableName`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>jsonPath</code> - <a href="https://github.com/json-path/JsonPath#path-examples">JSON Path</a></p>
+</li>
+<li>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
+</li>
+<li>
+<p><code>$variableName</code> - the variable name</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 40. Save number of id elements</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I set number of elements found by JSON path `$..id` to scenario variable `idsCount`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_save_number_of_elements_from_json"><a class="anchor" href="#_save_number_of_elements_from_json"></a>Save number of elements from JSON</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The step <a href="plugin-json.html#_save_number_of_json_elements" class="xref page">is moved</a> to <code>vividus-plugin-json</code>.
+The step is still available via <code>vividus-plugin-rest-api</code>, but it&#8217;ll be required
+to install <code>vividus-plugin-json</code> explicitly starting from VIVIDUS 0.6.0.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tips_tricks"><a class="anchor" href="#_tips_tricks"></a>Tips &amp; Tricks</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_validate_http_response_body"><a class="anchor" href="#_validate_http_response_body"></a>Validate HTTP response body</h3>
+<div class="paragraph">
+<p>In order to validate the body of the latest HTTP response use the <a href="#_http_response_as_text">response</a> dynamic variable to access the body
+data in conjunction with any step responsible for data validation like data comparison, JSON, XML and other steps.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 41. Validate response body</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://httpbin.org/json`
+Then JSON element from `${response}` by JSON path `$.slideshow` is equal to `
+{
+  "author": "Yours Truly",
+  "date": "date of publication",
+  "slides": [
+    {
+      "title": "Wake up to WonderWidgets!",
+      "type": "all"
+    },
+    {
+      "items": [
+        "Why &lt;em&gt;WonderWidgets&lt;/em&gt; are great",
+        "Who &lt;em&gt;buys&lt;/em&gt; WonderWidgets"
+      ],
+      "title": "Overview",
+      "type": "all"
+    }
+  ],
+  "title": "Sample Slide Show"
+}
+`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_save_http_response_body_into_variable"><a class="anchor" href="#_save_http_response_body_into_variable"></a>Save HTTP response body into variable</h3>
+<div class="paragraph">
+<p>The HTTP response body can be saved into static variable by using the <a href="../commons/vividus-steps.html#_initialize_variable" class="xref page">init variable step</a>
+in conjunction with the <a href="#_http_response_as_text">response</a> dynamic variable, it might be useful if you want to preserve the data for further computations since each
+subsequent HTTP call rewrites previously received response data.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 42. Save response body into variable</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute HTTP GET request for resource with URL `https://httpbin.org/json`
+When I initialize the scenario variable `json` with value `${response}`</code></pre>
 </div>
 </div>
 </div>
@@ -1428,10 +2381,10 @@ Then a JSON element by the JSON path '$.headers.Accept-Language' is equal to '"e
 <footer class="footer" style="padding: 0.25rem">
   <p>Copyright (C) 2019-2022 VIVIDUS team and individual contributors to <a href="https://docs.vividus.dev">VIVIDUS</a>. VIVIDUS is licensed under the <a href="https://github.com/vividus-framework/vividus/blob/master/LICENSE">Apache License 2.0</a></p>
 </footer>
-<script src="../../../_/js/site.js"></script>
-<script src="../../../_/js/vendor/lunr.js"></script>
-<script src="../../../_/js/vendor/search.js" id="search-script" data-base-path="../../.." data-page-path="/vividus/latest/plugins/plugin-rest-api.html"></script>
-<script async src="../../../_/../search-index.js"></script>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+  <script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
 <script src="../../../_/js/vendor/highlight.min.js"></script>
 <script charset="UTF-8" src="../../../_/js/vendor/gherkin.min.js"></script>
 <script charset="UTF-8" src="../../../_/js/vendor/gradle.min.js"></script>

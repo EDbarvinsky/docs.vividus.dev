@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Mobile Application Plugin :: VIVIDUS</title>
     <link rel="canonical" href="https://docs.vividus.dev/vividus/latest/plugins/plugin-mobile-app.html">
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
@@ -13,9 +13,8 @@
 <link rel="manifest" href="../../../site.webmanifest">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-<script src="https://buttons.github.io/buttons.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 <link rel="stylesheet" href="../../../_/css/additional.css">
-<link rel="stylesheet" href="../../../_/css/search.css">
     <script>var uiRootPath = '../../../_'</script>
   </head>
   <body class="article">
@@ -25,8 +24,10 @@
          <div class="navbar-item">
             <a href="https://github.com/vividus-framework/vividus">VIVIDUS // Docs</a>
          </div>
-           <div class="navbar-item">
-             <input id="search-input" type="text" placeholder="Search docs">
+           <div class="navbar-item search hide-for-print">
+             <div id="search-field" class="field">
+               <input id="search-input" type="text" placeholder="Search the docs">
+             </div>
            </div>
          <button class="navbar-burger" data-target="topbar-nav">
          <span></span>
@@ -66,7 +67,7 @@
                </div>
             </div>
             <div class="navbar-item">
-              <a href="https://vividus-support.herokuapp.com/">
+              <a href="https://vividus-support.vercel.app/">
                 <span class="icon">
                   <svg fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                      <g stroke-width=".790123">
@@ -125,7 +126,16 @@
     <a class="nav-link" href="../glossary.html">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../tests-configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../reporting.html">Reporting</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -144,6 +154,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../commons/table-transformers.html">Table Transformers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../commons/cli.html">CLI</a>
   </li>
 </ul>
   </li>
@@ -178,6 +191,9 @@
     <a class="nav-link" href="azure.html">Azure</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="plugin-azure-resource-manager.html">Resource Manager</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="plugin-azure-cosmos-db.html">Cosmos DB</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -191,6 +207,12 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="plugin-azure-functions.html">Functions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="plugin-azure-key-vault.html">Key Vault</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="plugin-azure-sql-db.html">SQL Database</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="plugin-azure-storage-account.html">Storage Account</a>
@@ -216,16 +238,31 @@
     <a class="nav-link" href="plugin-excel.html">Excel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="plugin-html.html">HTML*</a>
+    <a class="nav-link" href="plugin-html.html">HTML</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="plugin-json.html">JSON</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="plugin-parquet.html">Parquet*</a>
+    <a class="nav-link" href="plugin-parquet.html">Parquet</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="plugin-xml.html">XML*</a>
+    <a class="nav-link" href="plugin-xml.html">XML</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-yaml.html">YAML</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Remoting</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-ssh.html">SSH</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-winrm.html">WinRM</a>
   </li>
 </ul>
   </li>
@@ -235,6 +272,9 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="plugin-browserstack.html">BrowserStack</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-mobitru.html">Mobitru</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="plugin-lambda-test.html">LambdaTest</a>
@@ -251,13 +291,13 @@
     <a class="nav-link" href="plugin-accessibility.html">Accessibility</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="plugin-applitools.html">Applitools*</a>
+    <a class="nav-link" href="plugin-applitools.html">Applitools</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="plugin-datetime.html">Date/Time</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="plugin-electron.html">Electron*</a>
+    <a class="nav-link" href="plugin-electron.html">Electron</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="plugin-email.html">Email</a>
@@ -278,7 +318,7 @@
     <a class="nav-link" href="plugin-rest-api.html">REST API</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="plugin-ssh.html">SSH</a>
+    <a class="nav-link" href="plugin-shell.html">Shell</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="plugin-visual.html">Visual Testing</a>
@@ -367,6 +407,15 @@
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Mobile Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../user-guides/appium-setup.html">Appium Setup</a>
+  </li>
+</ul>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
@@ -374,7 +423,19 @@
     <span class="nav-text">Developer Guides</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../developer-guides/custom-plugins.html">Custom Plugins</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../developer-guides/extension-points.html">Extension points</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developer-guides/extensions.html">Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developer-guides/plugins.html">Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developer-guides/custom-modules.html">Custom modules</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -394,79 +455,70 @@
           <a href="../index.html">latest</a>
         </li>
         <li class="version">
+          <a href="../../0.5.2/index.html">0.5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../0.5.1/index.html">0.5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../0.5.0/index.html">0.5.0</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.16/index.html">0.4.16</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.15/index.html">0.4.15</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.14/index.html">0.4.14</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.13/index.html">0.4.13</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.12/index.html">0.4.12</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.11/index.html">0.4.11</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.10/index.html">0.4.10</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.9/index.html">0.4.9</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.8/index.html">0.4.8</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.7/index.html">0.4.7</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.6/index.html">0.4.6</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.5/index.html">0.4.5</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.4/index.html">0.4.4</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.3/index.html">0.4.3</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.2/index.html">0.4.2</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.1/index.html">0.4.1</a>
+        </li>
+        <li class="version">
           <a href="../../0.4.0/index.html">0.4.0</a>
         </li>
         <li class="version">
           <a href="../../0.3.12/index.html">0.3.12</a>
         </li>
         <li class="version">
-          <a href="../../0.3.11/index.html">0.3.11</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.10/index.html">0.3.10</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.9/index.html">0.3.9</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.8/index.html">0.3.8</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.7/index.html">0.3.7</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.6/index.html">0.3.6</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.5/index.html">0.3.5</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.4/index.html">0.3.4</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.3/index.html">0.3.3</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.2/index.html">0.3.2</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.1/index.html">0.3.1</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.0/index.html">0.3.0</a>
-        </li>
-        <li class="version">
           <a href="../../0.2.14/index.html">0.2.14</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.13/index.html">0.2.13</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.12/index.html">0.2.12</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.11/index.html">0.2.11</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.10/index.html">0.2.10</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.9/index.html">0.2.9</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.8/index.html">0.2.8</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.7/index.html">0.2.7</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.6/index.html">0.2.6</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.5/index.html">0.2.5</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.4/index.html">0.2.4</a>
         </li>
       </ul>
     </li>
@@ -490,31 +542,28 @@
   <button class="version-menu-toggle" title="Show other versions of page">latest</button>
   <div class="version-menu">
     <a class="version is-current" href="plugin-mobile-app.html">latest</a>
+    <a class="version" href="../../0.5.2/plugins/plugin-mobile-app.html">0.5.2</a>
+    <a class="version" href="../../0.5.1/plugins/plugin-mobile-app.html">0.5.1</a>
+    <a class="version" href="../../0.5.0/plugins/plugin-mobile-app.html">0.5.0</a>
+    <a class="version" href="../../0.4.16/plugins/plugin-mobile-app.html">0.4.16</a>
+    <a class="version" href="../../0.4.15/plugins/plugin-mobile-app.html">0.4.15</a>
+    <a class="version" href="../../0.4.14/plugins/plugin-mobile-app.html">0.4.14</a>
+    <a class="version" href="../../0.4.13/plugins/plugin-mobile-app.html">0.4.13</a>
+    <a class="version" href="../../0.4.12/plugins/plugin-mobile-app.html">0.4.12</a>
+    <a class="version" href="../../0.4.11/plugins/plugin-mobile-app.html">0.4.11</a>
+    <a class="version" href="../../0.4.10/plugins/plugin-mobile-app.html">0.4.10</a>
+    <a class="version" href="../../0.4.9/plugins/plugin-mobile-app.html">0.4.9</a>
+    <a class="version" href="../../0.4.8/plugins/plugin-mobile-app.html">0.4.8</a>
+    <a class="version" href="../../0.4.7/plugins/plugin-mobile-app.html">0.4.7</a>
+    <a class="version" href="../../0.4.6/plugins/plugin-mobile-app.html">0.4.6</a>
+    <a class="version" href="../../0.4.5/plugins/plugin-mobile-app.html">0.4.5</a>
+    <a class="version" href="../../0.4.4/plugins/plugin-mobile-app.html">0.4.4</a>
+    <a class="version" href="../../0.4.3/plugins/plugin-mobile-app.html">0.4.3</a>
+    <a class="version" href="../../0.4.2/plugins/plugin-mobile-app.html">0.4.2</a>
+    <a class="version" href="../../0.4.1/plugins/plugin-mobile-app.html">0.4.1</a>
     <a class="version" href="../../0.4.0/plugins/plugin-mobile-app.html">0.4.0</a>
     <a class="version" href="../../0.3.12/plugins/plugin-mobile-app.html">0.3.12</a>
-    <a class="version" href="../../0.3.11/plugins/plugin-mobile-app.html">0.3.11</a>
-    <a class="version" href="../../0.3.10/plugins/plugin-mobile-app.html">0.3.10</a>
-    <a class="version" href="../../0.3.9/plugins/plugin-mobile-app.html">0.3.9</a>
-    <a class="version" href="../../0.3.8/plugins/plugin-mobile-app.html">0.3.8</a>
-    <a class="version" href="../../0.3.7/plugins/plugin-mobile-app.html">0.3.7</a>
-    <a class="version" href="../../0.3.6/plugins/plugin-mobile-app.html">0.3.6</a>
-    <a class="version" href="../../0.3.5/plugins/plugin-mobile-app.html">0.3.5</a>
-    <a class="version" href="../../0.3.4/plugins/plugin-mobile-app.html">0.3.4</a>
-    <a class="version" href="../../0.3.3/plugins/plugin-mobile-app.html">0.3.3</a>
-    <a class="version" href="../../0.3.2/plugins/plugin-mobile-app.html">0.3.2</a>
-    <a class="version" href="../../0.3.1/plugins/plugin-mobile-app.html">0.3.1</a>
-    <a class="version" href="../../0.3.0/plugins/plugin-mobile-app.html">0.3.0</a>
     <a class="version" href="../../0.2.14/plugins/plugin-mobile-app.html">0.2.14</a>
-    <a class="version" href="../../0.2.13/plugins/plugin-mobile-app.html">0.2.13</a>
-    <a class="version" href="../../0.2.12/plugins/plugin-mobile-app.html">0.2.12</a>
-    <a class="version" href="../../0.2.11/plugins/plugin-mobile-app.html">0.2.11</a>
-    <a class="version" href="../../0.2.10/plugins/plugin-mobile-app.html">0.2.10</a>
-    <a class="version" href="../../0.2.9/plugins/plugin-mobile-app.html">0.2.9</a>
-    <a class="version" href="../../0.2.8/plugins/plugin-mobile-app.html">0.2.8</a>
-    <a class="version" href="../../0.2.7/plugins/plugin-mobile-app.html">0.2.7</a>
-    <a class="version" href="../../0.2.6/plugins/plugin-mobile-app.html">0.2.6</a>
-    <a class="version is-missing" href="../../0.2.5/index.html">0.2.5</a>
-    <a class="version is-missing" href="../../0.2.4/index.html">0.2.4</a>
   </div>
 </div>
   <div class="edit-this-page"><a href="https://github.com/vividus-framework/vividus/edit/master/docs/modules/plugins/pages/plugin-mobile-app.adoc">Edit this Page</a></div>
@@ -535,11 +584,23 @@
 <div class="sect1">
 <h2 id="_installation"><a class="anchor" href="#_installation"></a>Installation</h2>
 <div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Copy the below line to <code>dependencies</code> section of the project <code>build.gradle</code> file</p>
 <div class="listingblock">
 <div class="title">Example 1. build.gradle</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation(group: 'org.vividus', name: 'vividus-plugin-mobile-app', version: '0.4.1-SNAPSHOT')</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation(group: 'org.vividus', name: 'vividus-plugin-mobile-app', version: '0.5.3-SNAPSHOT')</code></pre>
 </div>
+</div>
+</li>
+<li>
+<p>If the project was imported to the IDE before adding new plugin,
+<a href="../getting-started.html#_use_ide_for_the_tests_development" class="xref page">re-generate</a>
+the configuration files for the used IDE and then refresh the project in the used IDE.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -548,7 +609,7 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>By.&lt;locatorType&gt;(&lt;locatorValue&gt;):&lt;visibility&gt;-&gt;filter.&lt;filterType&gt;(&lt;filterValue&gt;)</pre>
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">By.&lt;locatorType&gt;(&lt;locatorValue&gt;):&lt;visibility&gt;-&gt;filter.&lt;filterType&gt;(&lt;filterValue&gt;)</code></pre>
 </div>
 </div>
 <div class="admonitionblock important">
@@ -583,6 +644,107 @@ By. prefix is optional.
 </ol>
 </div>
 <div class="sect2">
+<h3 id="_reusable_locators"><a class="anchor" href="#_reusable_locators"></a>Reusable locators</h3>
+<div class="paragraph">
+<p>Feature allows to define custom reusable locator types via properties. These new locator types should rely on one of the already existing ones.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 2. Properties</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">ui.locator.&lt;locatorName&gt;.pattern
+ui.locator.&lt;locatorName&gt;.locator-type</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>locatorName</code> - The name of the reusable locator.</p>
+</li>
+<li>
+<p><code>pattern</code> - The pattern of the reusable locator.</p>
+</li>
+<li>
+<p><code>locator-type</code> - The base locator type.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Example 3. Definition of custom locator</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">ui.locator.anyAttOrText.locator-type=xpath
+ui.locator.anyAttOrText.pattern=//*[@*='%s' or text()='%s']</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 4. Usage of custom locator</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given I am on the main application page
+Then number of elements found by `anyAttOrText(attribute, text)` is = `1`</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 5. Usage of custom locator with comma in parameter</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given I am on the main application page
+Then number of elements found by `anyAttOrText(attribute, with comma\, text)` is = `1`</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+<th class="tableblock halign-left valign-top">Usage</th>
+<th class="tableblock halign-left valign-top">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Single parameter doesn&#8217;t require comma escaping.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>//<strong>[@</strong>='%1$s' or text()='%1$s']</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>customLocator(Hello, Vlad!)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>//<strong>[@</strong>='Hello, Vlad!' or text()='Hello, Vlad!']</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The pattern with a single parameter was referenced twice.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>//<strong>[@</strong>='%1$s' or text()='%1$s']</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>customLocator(text)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>//<strong>[@</strong>='text' or text()='text']</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The pattern with a <code>,</code> in value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>//<strong>[@</strong>='%s' or text()='%s']</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>customLocator(te\,xt1, text2)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>//<strong>[@</strong>='te,xt1' or text()='text2']</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The pattern containing <code>%</code> character</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>//input[@id="username" and text()="%%%s"]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>customLocator(admin)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>//input[@id="username" and text()="%admin]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The pattern without parameters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>//input[@id="username"]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>customLocator()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>//input[@id="username"]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The pattern with two parameter placeholders was used with invalid number of parameters.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>//<strong>[@</strong>='%s' or text()='%s']</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>customLocator(text)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Exception will be thrown!</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
 <h3 id="_filter_types"><a class="anchor" href="#_filter_types"></a>Filter Types</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -609,12 +771,12 @@ By. prefix is optional.
 <td class="tableblock halign-left valign-top"><p class="tableblock">tagName(h3)&#8594;filter.textPart(Welcome)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>text</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Filter elements by their exact text.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">tagName(android.widget.EditText)&#8594;filter.text(Welcome)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>attribute</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Filter elements by their attribute values</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>tagName(android.widget.TextView)&#8594;filter.attribute(text=Hi)</code> - <code>android.widget.TextView</code> element has the <code>text</code> attribute with <code>Hi</code> value
@@ -644,28 +806,34 @@ By. prefix is optional.
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XPath</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xPath</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">any</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Search the app XML source using xpath (not recommended, has <a href="https://appium.io/docs/en/commands/element/find-elements/index.html#selector-strategies">performance issues</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xpath(//android.widget.TextView[@text='Home']) or By.xpath(//XCUIElementTypeStaticText[@value='Home'])</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Accessibility ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accessibilityId</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">any</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="https://appium.io/docs/en/commands/element/find-elements/index.html#selector-strategies">Accessibility ID</a> selector strategy</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">accessibilityId(menu-toggler) or By.accessibilityId(menu-toggler)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">any</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="https://appium.io/docs/en/commands/element/find-elements/index.html#selector-strategies">ID</a> selector strategy</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">id(org.vividus:id/menu-toggler) or By.id(menu-toggler)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">iOS Class Chain</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iosClassChain</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>iOS</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="https://github.com/facebookarchive/WebDriverAgent/wiki/Class-Chain-Queries-Construction-Rules">Class Chain Queries</a> for more details</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">iosClassChain(**/XCUIElementTypeCell[$name BEGINSWITH "A"$]) or By.iosClassChain(**/XCUIElementTypeCell[$name BEGINSWITH "B"$])</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iosNsPredicate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iOS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="https://github.com/appium/appium-xcuitest-driver/blob/master/docs/ios/ios-predicate.md">iOS Predicate Syntax</a> for more details</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iosNsPredicate(name BEGINSWITH 'A') or By.iosNsPredicate(name BEGINSWITH 'B')</p></td>
 </tr>
 </tbody>
 </table>
@@ -709,6 +877,18 @@ By. prefix is optional.
 <div class="sect1">
 <h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
 <div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The properties marked with <strong>bold</strong> are mandatory.
+</td>
+</tr>
+</table>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 35.2941%;">
@@ -735,7 +915,7 @@ By. prefix is optional.
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>story</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Defines the test lifecycle of the mobile application:</p>
+<p>The test lifecycle of the mobile application:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -755,28 +935,58 @@ By. prefix is optional.
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ui.publish-source-on-failure</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true/false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Defines if Vividus publishes the application source code on failure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ui.publish-source-on-failure</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>true</code>
+<code>false</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to publish the application source code on failure or not</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">selenium.grid.host</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ui.context.self-healing</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>true</code><br>
+<code>false</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the value is set to <code>true</code>, an attempt to reset context will be performed when it becomes stale.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code class="subs=+quotes"><strong>selenium.grid.host</strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">hostname</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Defines remote grid host to be used to create a new session</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;empty&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remote grid host to be used to create a new session</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">selenium.grid.username</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selenium.grid.username</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">username</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Defines remote grid username to be used to create a new session</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;empty&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remote grid username to be used to create a new session</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">selenium.grid.password</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selenium.grid.password</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">password</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Defines password to be used to create a new session</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;empty&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Password to be used to create a new session</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ui.wait.timeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a> format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PT1M</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total duration to wait for UI condition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ui.wait.polling-period</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a> format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PT2S</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used together with <code>ui.wait.timeout</code>. Total duration of time between two iterations of UI condition check</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ui.report.image-compression-quality</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value between 0 and 1 e.g. 0.75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables compressions of the images published to the report using the specified compression quality. If 1 is set then no compression will be performed. It may help to decrease total report size.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>selenium.grid.platform-name</code></p></td>
@@ -892,28 +1102,106 @@ By. prefix is optional.
 </table></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">proxy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Provides possibility to attach screenshot for failed proxy steps</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">proxy.enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>true</code>
+<code>false</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable proxy for the whole test run</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true/false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enabled proxy for the run</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">proxy.host</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.recording.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>true</code>
+<code>false</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable proxy recording</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.host</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">any host name resolving on the machine</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;empty&gt;</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Overrides the host which will be used by proxy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">proxy.ports</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ports range(e.g., 10000-10005)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Defines ports range which could be used for proxy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">proxy.connectable-host</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.ports</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ports range (e.g., <code>10000-10005</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;empty&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ports range which could be occupied for proxy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.connectable-host</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>host.docker.internal</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;empty&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Overrides the proxy host which will be passed to browser</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.publish-har-on-failure</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>true</code>
+<code>false</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables publishing of attachments with HAR to each failed step. <code>@noHarOnFailure</code> meta tag can be used to disable HAR publishing at the story level.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.trust-all-servers</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>true</code>
+<code>false</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to disable verification of upstream servers SSL certificates</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.capture-types</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HAR capture types: <code>REQUEST_HEADERS</code>, <code>REQUEST_COOKIES</code>, <code>REQUEST_CONTENT</code>, <code>REQUEST_BINARY_CONTENT</code>, <code>RESPONSE_HEADERS</code>, <code>RESPONSE_COOKIES</code>, <code>RESPONSE_CONTENT</code>, <code>RESPONSE_BINARY_CONTENT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>REQUEST_CONTENT, RESPONSE_CONTENT, REQUEST_BINARY_CONTENT, RESPONSE_BINARY_CONTENT, REQUEST_HEADERS, RESPONSE_HEADERS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of HAR capture types</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.mitm.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>true</code>
+<code>false</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to enable <a href="https://docs.mitmproxy.org/stable">MITM proxy</a> for the whole test run</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.mitm.mitm-manager-type</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SELF_SIGNED</code>
+<code>IMPERSONATED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IMPERSONATED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The MITM type using the corresponding certificates. <code>SELF_SIGNED</code> MITM manager uses self-signed certificates that
+are generated lazily if the given keystore file doesn&#8217;t yet exist. Please note that certificates are usually generated
+in the current working directory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.mitm.key-store.type</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">keystore type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>JKS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.oracle.com/en/java/javase/17/docs/specs/security/standard-names.html#keystore-types">keystore type</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.mitm.key-store.path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path to keystore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;empty&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The relative to <code>src/main/resources</code> path to keystore</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.mitm.key-store.password</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">password for keystore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;empty&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The password for keystore</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxy.mitm.key-store.alias</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">keystore alias</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;empty&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The alias for certificate entry in keystore</p></td>
 </tr>
 </tbody>
 </table>
@@ -988,24 +1276,50 @@ selenium.grid.automation-name=UIAutomator2</code></pre>
 <div class="sect2">
 <h3 id="_local"><a class="anchor" href="#_local"></a>Local</h3>
 <div class="paragraph">
-<p>The profile simplifies execution of tests against the local Appium server. It could be used in conjunction with: <code>mobile_app/android</code>, <code>mobile_app/ios</code>, <code>mobile_app/tvos</code>
-The profile can be enabled by adding <code>mobile_app/local</code> to <code>configuration.profiles</code> property</p>
+<p>The local profiles can be used in conjunction with:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mobile_app/android</code>,</p>
+</li>
+<li>
+<p><code>mobile_app/ios</code>,</p>
+</li>
+<li>
+<p><code>mobile_app/tvos</code>.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_mobile_applocal"><a class="anchor" href="#_mobile_applocal"></a><code>mobile_app/local</code></h4>
 <div class="paragraph">
-<p>Default profile configuration</p>
+<p>The profile simplifies configuration of tests execution against the local Appium <strong>1.x</strong> server.</p>
 </div>
 <div class="listingblock">
+<div class="title">Example 6. Configure local execution of the tests for iOS native application</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">selenium.grid.url=http://127.0.0.1:4723/wd/hub
-selenium.grid.platformName=${selenium.grid.platform-name}
-selenium.grid.automationName=${selenium.grid.automation-name}</code></pre>
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">configuration.profiles=mobile_app/local,mobile_app/ios</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mobile_applocal2"><a class="anchor" href="#_mobile_applocal2"></a><code>mobile_app/local2</code></h4>
+<div class="paragraph">
+<p>The profile simplifies configuration of tests execution against the local Appium <a href="https://appium.github.io/appium/docs/en/2.0/guides/migrating-1-to-2/#breaking-changes"><strong>2.x</strong></a> server.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 7. Configure local execution of the tests for Android native application</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">configuration.profiles=mobile_app/local2,mobile_app/android</code></pre>
+</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_dynamic_variables"><a class="anchor" href="#_dynamic_variables"></a><a href="../commons/variables.html" class="page">Dynamic variables</a></h2>
+<h2 id="_dynamic_variables"><a class="anchor" href="#_dynamic_variables"></a><a href="../commons/variables.html" class="xref page">Dynamic variables</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_get_clipboard_text"><a class="anchor" href="#_get_clipboard_text"></a>Get clipboard text</h3>
@@ -1041,7 +1355,7 @@ selenium.grid.automationName=${selenium.grid.automation-name}</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 2. Verify clipboard content</div>
+<div class="title">Example 8. Verify clipboard content</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then `${clipboard-text}` is equal to `uarlouski@gmail.com`</code></pre>
 </div>
@@ -1111,7 +1425,7 @@ In case of missing search context the error will be logged and <code>-1</code> w
 </tbody>
 </table>
 <div class="listingblock">
-<div class="title">Example 3. Check the size and the location of the image</div>
+<div class="title">Example 9. Check the size and the location of the image</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I change context to element located `id(userpic)`
 Then `${context-height}` is &gt; `0`
@@ -1131,13 +1445,11 @@ Then `${context-y-coordinate}` is &gt; `0`</code></pre>
 <h4 id="_variable_name_2"><a class="anchor" href="#_variable_name_2"></a><strong>Variable name</strong></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">---
-${source-code}
----</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">${source-code}</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 4. Check if element exists on UI</div>
+<div class="title">Example 10. Check if element exists on UI</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then `${source-code}` matches `.+Home.+`</code></pre>
 </div>
@@ -1164,7 +1476,7 @@ ${source-code}
 <h3 id="_start_mobile_application_with_capabilities"><a class="anchor" href="#_start_mobile_application_with_capabilities"></a>Start mobile application with capabilities</h3>
 <div class="paragraph">
 <p>Starts mobile application with capabilities from user&#8217;s <code>*.properties</code> files and profiles set by a user.
-Additionally the step takes a list of capabilities as an argument that overrides gloablly-defined capabilities.</p>
+Additionally the step takes a list of capabilities as an argument that overrides globally-defined capabilities.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1174,13 +1486,13 @@ Additionally the step takes a list of capabilities as an argument that overrides
 <div class="ulist">
 <ul>
 <li>
-<p><code>$capabilities</code> - The capabilities to start application with, these capabilies
+<p><code>$capabilities</code> - The capabilities to start application with, these capabilities
 have higher priority than capabilities defined in <code>*.properties</code> files and profiles.</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 5. Start mobile application with 2 custom capabilities</div>
+<div class="title">Example 11. Start mobile application with 2 custom capabilities</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given I start mobile application with capabilities:
 |name                           |value|
@@ -1209,7 +1521,7 @@ activate it.</p>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 6. Switch to Safari browser application</div>
+<div class="title">Example 12. Switch to Safari browser application</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I activate application with bundle identifier `com.apple.mobilesafari`</code></pre>
 </div>
@@ -1249,7 +1561,7 @@ Given I start mobile application with capabilities:
 <p>the step re-uses the current session which significantly improves performance.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 7. Reinstall mobile application</div>
+<div class="title">Example 13. Reinstall mobile application</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I reinstall mobile application with bundle identifier `vividus-mobile.app`</code></pre>
 </div>
@@ -1274,7 +1586,7 @@ navigates to the home device screen. The remote session will not be closed.</p>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 8. Terminates Safari browser application</div>
+<div class="title">Example 14. Terminates Safari browser application</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I terminate application with bundle identifier `com.apple.mobilesafari`</code></pre>
 </div>
@@ -1288,6 +1600,31 @@ navigates to the home device screen. The remote session will not be closed.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I close mobile application</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_run_mobile_application_in_background"><a class="anchor" href="#_run_mobile_application_in_background"></a>Run mobile application in background</h3>
+<div class="paragraph">
+<p>Runs mobile application in the background for specific period of time and either activates the app after a certain amount of time, or leave the app deactivated (when PT-1S is used). See <a href="https://appium.io/docs/en/commands/device/app/background-app/">Appium docs</a> for more details.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I send mobile application to background for `$period` period</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$period</code> - The period of time in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a> format.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 15. Run app in background</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I send mobile application to background for `PT5S` period
+Then number of elements found by `accessibilityId(login-button)` is equal to `1`</code></pre>
 </div>
 </div>
 </div>
@@ -1309,7 +1646,7 @@ navigates to the home device screen. The remote session will not be closed.</p>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 9. Configure to show invisible elements</div>
+<div class="title">Example 16. Configure to show invisible elements</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I change Appium session settings:
 |name                  |value|
@@ -1335,7 +1672,7 @@ navigates to the home device screen. The remote session will not be closed.</p>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 10. Upload file</div>
+<div class="title">Example 17. Upload file</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I upload file `images/avatar.png` to device
 Then the avatar icon is displayed with the uploaded image</code></pre>
@@ -1343,47 +1680,85 @@ Then the avatar icon is displayed with the uploaded image</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_switch_to_web_view_by_index"><a class="anchor" href="#_switch_to_web_view_by_index"></a>Switch to Web view by index</h3>
-<div class="admonitionblock warning">
+<h3 id="_delete_a_file_from_the_device"><a class="anchor" href="#_delete_a_file_from_the_device"></a>Delete a file from the device</h3>
+<div class="paragraph">
+<p>Deletes a file from the device/emulator/simulator.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I delete file `$filePath` from device</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Argument</th>
+<th class="tableblock halign-left valign-top">Platform</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle" rowspan="2"><p class="tableblock"><code>$filePath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iOS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The path to an existing remote file on the device. This variable can be prefixed with bundle id, so then the file will be deleted from the corresponding application container instead of the default media folder. Use <code>@&lt;app_bundle_id&gt;:&lt;optional_container_type&gt;/&lt;path_to_the_file_or_folder_inside_container&gt;</code> format to delete a file or a folder from an application container of the given type. The only supported container type is 'documents'. If the container type is not set explicitly for a bundle id, then the default application container is going to be mounted (aka --container ifuse argument) e.g. If <code>@com.myapp.bla:documents/111.png</code> is provided, <code>On My iPhone/&lt;app name&gt;</code> in Files app will be mounted to the host machine. `@com.myapp.bla:documents/ means On My iPhone/&lt;app name&gt;.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/DCIM/100APPLE/image.png</code> or <code>@com.mycompany.myapp:documents/myfile.txt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Android</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The full path to the remote file or a file inside an application bundle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/sdcard/myfile.txt</code> or <code>@my.app.id/path/in/bundle</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="title">Example 18. Delete file</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I delete file `/sdcard/Pictures/avatar.png` from device</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-This step is deprecated and will be removed in VIVIDUS 0.5.0. The replacement is <a href="#_switch_to_web_view_by_name">Switch to Web view by name</a>.
+On iOS real device to add or delete photo or video to/from "Camera Roll" you need upload/delete photos or
+videos to/from <strong>/DCIM/100APPLE/</strong> folder and then trigger a rebuild of the "Camera Roll" database by deleting the old
+databases. You can accomplish it by deleting following files: <strong>/PhotoData/Photos.sqlite</strong>, <strong>/PhotoData/Photos.sqlite-shm</strong>,
+<strong>/PhotoData/Photos.sqlite-wal</strong>. Restart device is necessary after that.
 </td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Switches context to a web view by the index, it starts from 1. See <a href="http://appium.io/docs/en/writing-running-appium/web/hybrid/">Automating hybrid apps</a> for more information.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I switch to web view with index `$index`</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>$index</code> - The index of the web view.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Example 11. Switch to web view by index</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of elements found by `xpath(html)` is equal to `0`
-When I switch to web view with index `1`
-Then number of elements found by `xpath(html)` is equal to `1`</code></pre>
-</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+On iOS simulator to delete photo or video from "Camera Roll" you need to delete photo or video from
+<strong>/Media/DCIM/100APPLE/</strong> and then trigger a rebuild of the "Camera Roll" database by deleting the old databases. You can
+accomplish it by deleting following files: <strong>/Media/PhotoData/Photos.sqlite</strong>, <strong>/Media/PhotoData/Photos.sqlite-shm</strong>,
+<strong>/Media/PhotoData/Photos.sqlite-wal</strong>. And then restart simulator.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_switch_to_web_view_by_name"><a class="anchor" href="#_switch_to_web_view_by_name"></a>Switch to Web view by name</h3>
 <div class="paragraph">
-<p>Switches context to a web view with name that matches the rule. See <a href="http://appium.io/docs/en/writing-running-appium/web/hybrid/">Automating hybrid apps</a> for more information.</p>
+<p>Switches context to a web view with name that matches the rule (see <a href="http://appium.io/docs/en/writing-running-appium/web/hybrid/">Automating hybrid apps</a> for more information). Also, Appium capabilities for <a href="https://github.com/appium/appium-xcuitest-driver#web-context">iOS</a> and <a href="https://github.com/appium/appium-uiautomator2-driver#web-context">Android</a> are available for the fine-tuning configuration.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1393,7 +1768,7 @@ Then number of elements found by `xpath(html)` is equal to `1`</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p><code>$comparisonRule</code> - <a href="../parameters/string-comparison-rule.html" class="page">The web view name comparison rule</a>.</p>
+<p><code>$comparisonRule</code> - <a href="../parameters/string-comparison-rule.html" class="xref page">The web view name comparison rule</a>.</p>
 </li>
 <li>
 <p><code>$value</code> - The value to find the target web view.</p>
@@ -1401,7 +1776,7 @@ Then number of elements found by `xpath(html)` is equal to `1`</code></pre>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 12. Switch to web view by name</div>
+<div class="title">Example 19. Switch to web view by name</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of elements found by `xpath(html)` is equal to `0`
 When I switch to web view with name that contains `vividustestapp`
@@ -1420,7 +1795,7 @@ Then number of elements found by `xpath(html)` is equal to `1`</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 13. Switch to native context</div>
+<div class="title">Example 20. Switch to native context</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of elements found by `xpath(html)` is equal to `1`
 When I switch to native context
@@ -1434,13 +1809,27 @@ Then number of elements found by `xpath(html)` is equal to `0`</code></pre>
 <p>Taps on the element located by the locator.</p>
 </div>
 <div class="paragraph">
-<p>The atomic actions performed are:
-* press on the element;
-* release.</p>
+<p>The atomic actions performed are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>press on the element;</p>
+</li>
+<li>
+<p>release.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 21. Deprecated syntax</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I tap on element located `$locator`</code></pre>
+</div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I tap on element located `$locator`</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I tap on element located by `$locator`</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -1451,9 +1840,9 @@ Then number of elements found by `xpath(html)` is equal to `0`</code></pre>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 14. Tap on element</div>
+<div class="title">Example 22. Tap on element</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I tap on element located `accessibilityId(menu-toggler)`</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I tap on element located by `accessibilityId(menu-toggler)`</code></pre>
 </div>
 </div>
 </div>
@@ -1463,14 +1852,30 @@ Then number of elements found by `xpath(html)` is equal to `0`</code></pre>
 <p>Taps on the element located by the locator with the specified duration.</p>
 </div>
 <div class="paragraph">
-<p>The atomic actions performed are:
-* press on the element;
-* wait for the duration;
-* release.</p>
+<p>The atomic actions performed are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>press on the element;</p>
+</li>
+<li>
+<p>wait for the duration;</p>
+</li>
+<li>
+<p>release.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 23. Deprecated syntax</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I tap on element located `$locator` with duration `$duration`</code></pre>
+</div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I tap on element located `$locator` with duration `$duration`</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I tap on element located by `$locator` with duration `$duration`</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -1484,9 +1889,45 @@ Then number of elements found by `xpath(html)` is equal to `0`</code></pre>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 15. Tap on element with duration</div>
+<div class="title">Example 24. Tap on element with duration</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I tap on element located `accessibilityId(menu-toggler)` with duration `PT0.5S`</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I tap on element located by `accessibilityId(menu-toggler)` with duration `PT0.5S`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_double_tap_on_element"><a class="anchor" href="#_double_tap_on_element"></a>Double tap on element</h3>
+<div class="paragraph">
+<p>Performs double tap on the element located by the locator.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The step is supported for Android and iOS platforms.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I double tap on element located by `$locator`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 25. Double tap on element</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I double tap on element located by `accessibilityId(increment)`</code></pre>
 </div>
 </div>
 </div>
@@ -1508,7 +1949,7 @@ Then number of elements found by `xpath(html)` is equal to `0`</code></pre>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 16. Go to Home screen</div>
+<div class="title">Example 26. Go to Home screen</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I press Home key</code></pre>
 </div>
@@ -1544,7 +1985,7 @@ to modify long press duration for <code>iOS</code> and <code>tvOS</code> you cou
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 17. Go to Home screen</div>
+<div class="title">Example 27. Go to Home screen</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I long press Home key</code></pre>
 </div>
@@ -1568,7 +2009,7 @@ to modify long press duration for <code>iOS</code> and <code>tvOS</code> you cou
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 18. Enter password</div>
+<div class="title">Example 28. Enter password</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I press keys:
 |key|
@@ -1610,7 +2051,7 @@ All the characters will be treated as is and passed sequentially. To send specia
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 19. Enter password</div>
+<div class="title">Example 29. Enter password</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I type text `pas1$`</code></pre>
 </div>
@@ -1634,9 +2075,17 @@ The existing text is re-written by the text passed into the step.
 </table>
 </div>
 <div class="paragraph">
-<p>The atomic actions performed are:
-* type text into the element;
-* hide keyboard.</p>
+<p>The atomic actions performed are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>type text into the element;</p>
+</li>
+<li>
+<p>hide keyboard.</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -1669,7 +2118,7 @@ is performed to close the keyboard.
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 20. Type text</div>
+<div class="title">Example 30. Type text</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I type `Bob` in field located `accessibilityId(username)`</code></pre>
 </div>
@@ -1696,7 +2145,7 @@ is performed to close the keyboard.
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 21. Type text and keep keyboard opened</div>
+<div class="title">Example 31. Type text and keep keyboard opened</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I type `Bob` in field located `accessibilityId(username)` and keep keyboard opened</code></pre>
 </div>
@@ -1708,9 +2157,17 @@ is performed to close the keyboard.
 <p>Clears the field located by the locator.</p>
 </div>
 <div class="paragraph">
-<p>The atomic actions performed are:
-* clear the field;
-* hide keyboard.</p>
+<p>The atomic actions performed are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>clear the field;</p>
+</li>
+<li>
+<p>hide keyboard.</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -1740,9 +2197,33 @@ is performed to close the keyboard.
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 22. Clear the field</div>
+<div class="title">Example 32. Clear the field</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I clear field located `accessibilityId(username)`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_clear_field_and_keep_keyboard_open"><a class="anchor" href="#_clear_field_and_keep_keyboard_open"></a>Clear field and keep keyboard open</h3>
+<div class="paragraph">
+<p>Only clears the field located by the locator. The keyboard hiding is skipped.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I clear field located `$locator` and keep keyboard open</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 33. Clear text and keep keyboard open</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I clear field located `accessibilityId(username)` and keep keyboard open</code></pre>
 </div>
 </div>
 </div>
@@ -1784,8 +2265,14 @@ the element, you need to switch the context to this element.
 </ul>
 </div>
 <div class="listingblock">
+<div class="title">Example 34. Deprecated syntax</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I swipe $direction to element located `$locator` with duration $swipeDuration</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I swipe $direction to element located by `$locator` with duration $swipeDuration</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -1802,15 +2289,15 @@ the element, you need to switch the context to this element.
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 23. Swipe to an element</div>
+<div class="title">Example 35. Swipe to an element</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of elements found by `accessibilityId(end-of-screen)` is equal to `0`
-When I swipe UP to element located `accessibilityId(end-of-screen)` with duration PT1S
+When I swipe UP to element located by `accessibilityId(end-of-screen)` with duration PT1S
 Then number of elements found by `accessibilityId(end-of-screen)` is equal to `1`</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 24. Swipe the context element</div>
+<div class="title">Example 36. Swipe the context element</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Scenario: Switch slides
 When I change context to element located `accessibilityId(carousel)`
@@ -1855,7 +2342,7 @@ Then number of elements found by `accessibilityId(slide 2)` is equal to `1`</cod
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 25. Select next item in the picker wheel</div>
+<div class="title">Example 37. Select next item in the picker wheel</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I select next value with `0.1` offset in picker wheel located `xpath(//XCUIElementTypePickerWheel)-&gt;filter.index(3)`</code></pre>
 </div>
@@ -1908,7 +2395,7 @@ When I stop recording `$instrument` metrics and save results to file `$path`</co
 </ol>
 </div>
 <div class="listingblock">
-<div class="title">Example 26. Perform profiling during application usage</div>
+<div class="title">Example 38. Perform profiling during application usage</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I start recording `Time Profiler` metrics
 !-- set of actions to measure performance
@@ -1952,19 +2439,19 @@ When I stop recording `Time Profiler` metrics and save results to file `${output
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 27. Set value of iOS slider (with range 0:50) to 45</div>
+<div class="title">Example 39. Set value of iOS slider (with range 0:50) to 45</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I set value of iOS slider located `xpath(//XCUIElementTypeSlider)` to `90` percents</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 28. Set value of iOS slider (with range -50:50) to 20</div>
+<div class="title">Example 40. Set value of iOS slider (with range -50:50) to 20</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I set value of iOS slider located `xpath(//XCUIElementTypeSlider)` to `70` percents</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 29. Set value of iOS slider (with range 18:65) to 55</div>
+<div class="title">Example 41. Set value of iOS slider (with range 18:65) to 55</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I set value of iOS slider located `xpath(//XCUIElementTypeSlider)` to `80` percents</code></pre>
 </div>
@@ -2007,22 +2494,171 @@ When I stop recording `Time Profiler` metrics and save results to file `${output
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 30. Set value of Android slider (with range 0:50) to 13</div>
+<div class="title">Example 42. Set value of Android slider (with range 0:50) to 13</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I set value of Android slider located `xpath(//android.widget.SeekBar)` to `13`</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 31. Set value of Android slider (with range -50:50) to -25</div>
+<div class="title">Example 43. Set value of Android slider (with range -50:50) to -25</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I set value of Android slider located `xpath(//android.widget.SeekBar)` to `25`</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 32. Set value of Android slider (with range 18:65) to 20</div>
+<div class="title">Example 44. Set value of Android slider (with range 18:65) to 20</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I set value of Android slider located `xpath(//android.widget.SeekBar)` to `2`</code></pre>
 </div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wait_for_element_appearance"><a class="anchor" href="#_wait_for_element_appearance"></a>Wait for element appearance</h3>
+<div class="paragraph">
+<p>Waits for appearance of the element by the locator.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+It&#8217;s forbidden to use <a href="#_visibility_types">Visibility types</a> in the locator.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until element by located `$locator` appears</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Deprecated syntax (will be removed in VIVIDUS 0.6.0)</em>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until element located `$locator` appears</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 45. Wait for appearance of the element with the specified name</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until element located by `name(welcome-image)` appears</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wait_for_element_disappearance"><a class="anchor" href="#_wait_for_element_disappearance"></a>Wait for element disappearance</h3>
+<div class="paragraph">
+<p>Waits for disappearance of the element by the locator.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the element doesn&#8217;t exist on the page/context, the step will immediately complete successfully.
+Checking the element on the page (if needed) should be done in a separate step (e.g. <a href="#_wait_for_element_appearance">Wait for element appearance</a> or <a href="plugin-html.html#_validate_elements" class="xref page">Validate elements</a>).
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+It&#8217;s forbidden to use <a href="#_visibility_types">Visibility types</a> in the locator.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until element located by `$locator` disappears</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Deprecated syntax (will be removed in VIVIDUS 0.6.0)</em>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until element located `$locator` disappears</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 46. Wait for disappearance of the element with the specified name</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until element located by `name(welcome-image)` disappears</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wait_for_expected_elements_number"><a class="anchor" href="#_wait_for_expected_elements_number"></a>Wait for expected elements number</h3>
+<div class="paragraph">
+<p>Waits for the expected number of elements located by locator.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+In order to wait for invisible elements one rely on <a href="#_visibility_types">Visibility types</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until number of elements located by `$locator` is $comparisonRule $number</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
+</li>
+<li>
+<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="xref page">The comparison rule</a>.</p>
+</li>
+<li>
+<p><code>$number</code> - The expected number of the elements.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 47. Wait for the visible elements</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until number of elements located by `tagName(img)` is equal to `5`</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 48. Wait for the invisible elements</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until number of elements located by `tagName(img):1` is equal to `5`</code></pre>
 </div>
 </div>
 </div>
@@ -2042,7 +2678,7 @@ When I stop recording `Time Profiler` metrics and save results to file `${output
 <p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
 </li>
 <li>
-<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="page">The comparison rule</a>.</p>
+<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="xref page">The comparison rule</a>.</p>
 </li>
 <li>
 <p><code>$quantity</code> - The expected number of the elements.</p>
@@ -2050,7 +2686,7 @@ When I stop recording `Time Profiler` metrics and save results to file `${output
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 33. Verify the number of elements</div>
+<div class="title">Example 49. Verify the number of elements</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of elements found by `tagName(img)` is equal to `5`</code></pre>
 </div>
@@ -2082,7 +2718,8 @@ The first one about number condition violation. The second one about state check
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-In case when locator&#8217;s visibility and checked state are equal (For an example :i and NOT_VISIBLE) exception will be thrown. In such cases please use step: <a href="#_verify_elements_number">Verify elements number</a>
+In case when <a href="#_visibility_types">Visibility types</a> are used and checked state are equal (For an example ':i' and 'NOT_VISIBLE') exception will be thrown. In such cases please use step: <a href="#_verify_elements_number">Verify elements number</a>.
+Contradictory visibility parameters (locator - ':i' and checked state - 'VISIBLE') are also not allowed.
 </td>
 </tr>
 </table>
@@ -2095,13 +2732,13 @@ In case when locator&#8217;s visibility and checked state are equal (For an exam
 <div class="ulist">
 <ul>
 <li>
-<p><code>$state</code> - <a href="../parameters/state.html" class="page">State</a></p>
+<p><code>$state</code> - <a href="../parameters/state.html" class="xref page">State</a></p>
 </li>
 <li>
 <p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
 </li>
 <li>
-<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="page">The comparison rule</a>.</p>
+<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="xref page">The comparison rule</a>.</p>
 </li>
 <li>
 <p><code>$quantity</code> - The expected number of elements.</p>
@@ -2109,57 +2746,9 @@ In case when locator&#8217;s visibility and checked state are equal (For an exam
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 34. Verify the number of elements in the state</div>
+<div class="title">Example 50. Verify the number of elements in the state</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of VISIBLE elements found by `tagName(img)` is = `1`</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_wait_for_element_appearance"><a class="anchor" href="#_wait_for_element_appearance"></a>Wait for element appearance</h3>
-<div class="paragraph">
-<p>Waits for appearance of an element by the locator.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until element located `$locator` appears</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Example 35. Wait for element appearance</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until element located `name(welcome-image)` appears</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_wait_for_element_disappearance"><a class="anchor" href="#_wait_for_element_disappearance"></a>Wait for element disappearance</h3>
-<div class="paragraph">
-<p>Waits for disappearance of an element by the locator.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until element located `$locator` disappears</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Example 36. Wait for element disappearance</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I wait until element located `name(welcome-image)` disappears</code></pre>
 </div>
 </div>
 </div>
@@ -2188,7 +2777,7 @@ Step will throw an error if the context element is not set.
 <div class="ulist">
 <ul>
 <li>
-<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="page">The comma-separated set of the variables scopes</a>.</p>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
 </li>
 <li>
 <p><code>$variableName</code> - The name of the variable to save the text.</p>
@@ -2196,7 +2785,7 @@ Step will throw an error if the context element is not set.
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 37. Save the text of the context element</div>
+<div class="title">Example 51. Save the text of the context element</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I change context to element located `By.id(username)`
 When I save text of context element to SCENARIO variable `username`</code></pre>
@@ -2231,7 +2820,7 @@ Step will throw an error if the context element is not set.
 <p><code>$attributeName</code> - The name of an element attribute.</p>
 </li>
 <li>
-<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="page">The comma-separated set of the variables scopes</a>.</p>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
 </li>
 <li>
 <p><code>$variableName</code> - The name of the variable to save the attribute value.</p>
@@ -2239,7 +2828,7 @@ Step will throw an error if the context element is not set.
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 38. Save the attribute value of the context element</div>
+<div class="title">Example 52. Save the attribute value of the context element</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I change context to element located `By.id(username)`
 When I save `innerText` attribute value of context element to SCENARIO variable `username`</code></pre>
@@ -2265,7 +2854,7 @@ When I save `innerText` attribute value of context element to SCENARIO variable 
 <p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
 </li>
 <li>
-<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="page">The comma-separated set of the variables scopes</a>.</p>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
 </li>
 <li>
 <p><code>$variableName</code> - The name of the variable to save the attribute value.</p>
@@ -2297,7 +2886,7 @@ When I save `innerText` attribute value of context element to SCENARIO variable 
 <p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
 </li>
 <li>
-<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="page">The comma-separated set of the variables scopes</a>.</p>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
 </li>
 <li>
 <p><code>$variableName</code> - The name of the variable to save the number of elements.</p>
@@ -2305,7 +2894,7 @@ When I save `innerText` attribute value of context element to SCENARIO variable 
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 39. Save number of elements</div>
+<div class="title">Example 53. Save number of elements</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I save number of elements located `tagName(a)` to scenario variable `numberOfLinks`
 Then `${numberOfLinks}` is equal to `1`</code></pre>
@@ -2316,6 +2905,32 @@ Then `${numberOfLinks}` is equal to `1`</code></pre>
 <h3 id="_change_context"><a class="anchor" href="#_change_context"></a>Change context</h3>
 <div class="paragraph">
 <p>Changes the context to an element located by locator for limiting area of subsequent UI interactions.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I change context to element located `$locator` in scope of current context</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 54. Change context</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of elements found by `By.xpath(html)` is equal to `1`
+When I change context to element located `By.xpath(//body)` in scope of current context
+Then number of elements found by `By.xpath(html)` is equal to `0`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reset_and_change_context"><a class="anchor" href="#_reset_and_change_context"></a>Reset and change context</h3>
+<div class="paragraph">
+<p>Resets current context and changes the context to an element located by locator for limiting area of subsequent UI interactions.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2330,7 +2945,7 @@ Then `${numberOfLinks}` is equal to `1`</code></pre>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 40. Change context</div>
+<div class="title">Example 55. Change context</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of elements found by `By.xpath(html)` is equal to `1`
 When I change context to element located `By.xpath(//body)`
@@ -2349,7 +2964,7 @@ Then number of elements found by `By.xpath(html)` is equal to `0`</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 41. Reset context</div>
+<div class="title">Example 56. Reset context</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of elements found by `By.xpath(html)` is equal to `1`
 When I change context to element located `By.xpath(//body)`
@@ -2360,9 +2975,35 @@ Then number of elements found by `By.xpath(html)` is equal to `1`</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_element_exists_for_duration"><a class="anchor" href="#_element_exists_for_duration"></a>Element exists for duration</h3>
+<h3 id="_element_existence_during_the_time_period"><a class="anchor" href="#_element_existence_during_the_time_period"></a>Element existence during the time period</h3>
 <div class="paragraph">
-<p>Verifies that an element located by locator exists for given duration.</p>
+<p>Validates the element located by the locator has existed for the period
+specified by the duration.</p>
+</div>
+<div class="paragraph">
+<p>The actions performed by the step:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>check the search context is set,</p>
+</li>
+<li>
+<p>search for the element to validate existence (this search may include wait for
+element appearance if it&#8217;s configured),</p>
+</li>
+<li>
+<p>validate the element has presented for the period specified by the duration.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then element located by `$locator` exists for `$duration` duration</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Deprecated syntax (will be removed in VIVIDUS 0.6.0)</em>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2372,17 +3013,17 @@ Then number of elements found by `By.xpath(html)` is equal to `1`</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p><code>$locator</code> - <a href="#_locator">Locator</a>.</p>
+<p><code>$locator</code> - The <a href="#_locator">Locator</a> to find an element.</p>
 </li>
 <li>
-<p><code>$duration</code> - The duration in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a> format.</p>
+<p><code>$duration</code> - The period of time the element should have existed in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a> format.</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 42. Element should exists for 5 second</div>
+<div class="title">Example 57. The element should have existed for 5 second</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then element located `id(banner)` exists for `PT5S` duration</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then element located by `id(banner)` exists for `PT5S` duration</code></pre>
 </div>
 </div>
 </div>
@@ -2397,7 +3038,7 @@ Then number of elements found by `By.xpath(html)` is equal to `1`</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 43. Navigate back</div>
+<div class="title">Example 58. Navigate back</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of elements found by `xpath(//*[@*='Welcome'])` is equal to `1`
 When I navigate back
@@ -2413,8 +3054,14 @@ their text in the specified order. The collection should have more than 1
 element with not empty text, otherwise the step fails.</p>
 </div>
 <div class="listingblock">
+<div class="title">Example 59. Deprecated syntax</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then elements located `$locator` are sorted by text in $sortingOrder order</code></pre>
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then elements located $locator are sorted by text in $sortingOrder order</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then elements located by $locator are sorted by text in $sortingOrder order</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -2464,11 +3111,11 @@ element with not empty text, otherwise the step fails.</p>
 </tbody>
 </table>
 <div class="listingblock">
-<div class="title">Example 44. Check items are sorted</div>
+<div class="title">Example 60. Check items are sorted</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given I am on a page with the URL 'https://grocery.by'
-When I click on element located `By.id(a-z)`
-Then elements located `By.xpath(//span[@id='item-to-purchase'])` are sorted by text in ascending order</code></pre>
+When I click on element located by `id(a-z)`
+Then elements located by `xpath(//span[@id='item-to-purchase'])` are sorted by text in ascending order</code></pre>
 </div>
 </div>
 </div>
@@ -2513,7 +3160,7 @@ The full path to a screenshot will be posted to logs and allure
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 45. Take a screenshot to a path</div>
+<div class="title">Example 61. Take a screenshot to a path</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I take screenshot and save it to folder `${screenshot-directory}/#{generate(Ancient.god)}.png`</code></pre>
 </div>
@@ -2629,7 +3276,7 @@ The full path to a screenshot will be posted to logs and allure
 <div class="ulist">
 <ul>
 <li>
-<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="page">The comma-separated set of the variables scopes</a>.</p>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
 </li>
 <li>
 <p><code>$variableName</code> - The name of the variable to save the value of the barcode.</p>
@@ -2637,7 +3284,7 @@ The full path to a screenshot will be posted to logs and allure
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 46. Scan a barcode</div>
+<div class="title">Example 62. Scan a barcode</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I scan barcode from screen and save result to scenario variable `qrCodeLink`
 Then `${qrCodeLink}` is equal to `https://www.example.com`</code></pre>
@@ -2677,7 +3324,7 @@ To avoid infinite loops the iterationLimit parameter is used. If iteration&#8217
 <div class="ulist">
 <ul>
 <li>
-<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="page">The comparison rule</a>.</p>
+<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="xref page">The comparison rule</a>.</p>
 </li>
 <li>
 <p><code>$number</code> - The number of elements to find.</p>
@@ -2689,16 +3336,228 @@ To avoid infinite loops the iterationLimit parameter is used. If iteration&#8217
 <p><code>$iterationLimit</code> - The maximum number of iterations to perform.</p>
 </li>
 <li>
-<p><code>$stepsToExecute</code> - The <code>ExamplesTable</code> with a single column containing the steps to execute.</p>
+<p><code>$stepsToExecute</code> - The <a href="../glossary.html#_examplestable" class="xref page">ExamplesTable</a> with a single column containing the steps to execute.</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 47. Disable menus</div>
+<div class="title">Example 63. Disable menus</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I find &gt;= `0` elements `xpath(//*[@class='menu enabled'])` and while they exist do up to 10 iteration of
-|step                                         |
-|When I click on element located `id(disable)`|</code></pre>
+|step                                            |
+|When I click on element located by `id(disable)`|</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_execute_javascript_with_arguments"><a class="anchor" href="#_execute_javascript_with_arguments"></a>Execute JavaScript with arguments</h3>
+<div class="paragraph">
+<p>Executes JavaScript via <a href="https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/JavascriptExecutor.html">JavascriptExecutor</a>. Step executes the script either without any arguments or with <code>String</code> or <code>Object</code> argument types.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute javascript `$script` with arguments:$arguments</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$script</code> - The JavaScript code to execute.</p>
+</li>
+<li>
+<p><code>$arguments</code> - The examples table with set of arguments and their type:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code class="subs=+quotes"><strong>value</strong></code> -  The value of the argument.</p>
+</li>
+<li>
+<p><code class="subs=+quotes"><strong>type</strong></code> -  The type of the argument. Either <code>string</code> or <code>object</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 64. Remove noisy assistant</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute javascript `document.querySelector('#assistant').remove()` with arguments:</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 65. Inject image</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute javascript `sauce:inject-image` with arguments:
+|value                                                                                       |type  |
+|iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=|string|</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 66. Throttle CPU</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute javascript `sauce:throttleCPU` with arguments:
+|value                                                                                       |type  |
+|{"rate" : 4}|object|</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_execute_javascript_and_save_result"><a class="anchor" href="#_execute_javascript_and_save_result"></a>Execute JavaScript and save result.</h4>
+<div class="paragraph">
+<p><a href="https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/JavascriptExecutor.html">Executes JavaScript</a> code and saves result into variable.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I execute javascript `$jsCode` and save result to $scopes variable `$variableName`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$jsCode</code> - Any JavaScript code. In order to save a result <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a> statement should be used.</p>
+</li>
+<li>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
+</li>
+<li>
+<p><code>$variableName</code> - The variable name to script execution result.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 67. Validate timings</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given I am on a page with the URL 'https://vividus-test-site.onrender.com/'
+When I execute javascript `return JSON.stringify(window.performance.timing)` and save result to scenario variable `timings`
+Then number of JSON elements from `${timings}` by JSON path `$.connectStart` is = 1</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_scan_barcode_from_context"><a class="anchor" href="#_scan_barcode_from_context"></a>Scan barcode from context</h3>
+<div class="paragraph">
+<p>Scan a barcode from the specified context and save its value to the variable with the specified name.
+If context not set - takes a screenshot of the current screen. Only the first found barcode will be scanned.</p>
+</div>
+<div class="paragraph">
+<p>Supported Code Formats</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">1D product</th>
+<th class="tableblock halign-left valign-top">1D industrial</th>
+<th class="tableblock halign-left valign-top">2D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>UPC-A</p>
+</li>
+<li>
+<p>UPC-E</p>
+</li>
+<li>
+<p>EAN-8</p>
+</li>
+<li>
+<p>EAN-13</p>
+</li>
+<li>
+<p>UPC/EAN Extension 2/5</p>
+</li>
+<li>
+<p>RSS-14</p>
+</li>
+<li>
+<p>RSS-Expanded</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Code 39</p>
+</li>
+<li>
+<p>Code 93</p>
+</li>
+<li>
+<p>Code 128</p>
+</li>
+<li>
+<p>Codabar</p>
+</li>
+<li>
+<p>ITF</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>QR Code</p>
+</li>
+<li>
+<p>Data Matrix</p>
+</li>
+<li>
+<p>Aztec</p>
+</li>
+<li>
+<p>PDF 417</p>
+</li>
+<li>
+<p>MaxiCode</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Actions performed at this step:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Takes a screenshot of the specified context. If it&#8217;s not set - takes a screenshot of the current screen (viewport and system bars)</p>
+</li>
+<li>
+<p>Scans a barcode from the screenshot and save its value to the variable</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I scan barcode from context and save result to $scopes variable `$variableName`</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
+</li>
+<li>
+<p><code>$variableName</code> - The name of the variable to save the value of the barcode.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 68. Scan the barcode</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I change context to element located `xpath(//android.view.ViewGroup[@resource-id='qrContainer'])`
+When I scan barcode from context and save result to scenario variable `qrCodeLink`
+Then `${qrCodeLink}` is equal to `https://www.example.com`</code></pre>
 </div>
 </div>
 </div>
@@ -2745,7 +3604,7 @@ To avoid infinite loops the iterationLimit parameter is used. If iteration&#8217
 <p><code>$urlPattern</code> - The regular expression to match HTTP request URL</p>
 </li>
 <li>
-<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="page">Comparison Rule</a></p>
+<p><code>$comparisonRule</code> - <a href="../parameters/comparison-rule.html" class="xref page">Comparison Rule</a></p>
 </li>
 <li>
 <p><code>$number</code> - The number to compare with</p>
@@ -2753,7 +3612,7 @@ To avoid infinite loops the iterationLimit parameter is used. If iteration&#8217
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 48. Check the number of HTTP GET and POST requests matching URL regurlar expression is equal to 1</div>
+<div class="title">Example 69. Check the number of HTTP GET and POST requests matching URL regular expression is equal to 1</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Then number of HTTP GET, POST requests with URL pattern `http://httpbin\.org/get` is equal to `1`</code></pre>
 </div>
@@ -2854,7 +3713,7 @@ To avoid infinite loops the iterationLimit parameter is used. If iteration&#8217
 </div>
 </li>
 <li>
-<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="page">The comma-separated set of the variables scopes</a>.</p>
+<p><code>$scopes</code> - <a href="../commons/variables.html#_scopes" class="xref page">The comma-separated set of the variables scopes</a>.</p>
 </li>
 <li>
 <p><code>$variableName</code> - The variable name to save the HTTP message part.</p>
@@ -2862,7 +3721,7 @@ To avoid infinite loops the iterationLimit parameter is used. If iteration&#8217
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 49. Validate the URL of the matching HTTP request</div>
+<div class="title">Example 70. Validate the URL of the matching HTTP request</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given I start mobile application
 When I capture HTTP GET or POST request with URL pattern `.*/search.*=vividus` and save URL to scenario variable `URL`
@@ -2870,7 +3729,7 @@ Then `${URL}` is equal to `https://www.google.com/search?q=vividus`</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 50. Validate the URL query of the matching HTTP request</div>
+<div class="title">Example 71. Validate the URL query of the matching HTTP request</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given I start mobile application
 When I capture HTTP GET request with URL pattern `.*/search.*=vividus` and save URL query to scenario variable `query`
@@ -2880,7 +3739,7 @@ Then `${query}` is equal to `{q=[vividus]}`</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 51. Validate the request data from the matching HTTP message</div>
+<div class="title">Example 72. Validate the request data from the matching HTTP message</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given I start mobile application
 When I capture HTTP GET request with URL pattern `https://www.google.com/search?q=vividus` and save request data to scenario variable `data`
@@ -2891,7 +3750,7 @@ Then `${data.responseStatus}` is equal to `200`</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 52. Validate the response data from the matching HTTP message</div>
+<div class="title">Example 73. Validate the response data from the matching HTTP message</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given I start mobile application
 When I capture HTTP GET request with URL pattern `https://www.google.com/search?q=vividus` and save request data to scenario variable `data`
@@ -2923,7 +3782,7 @@ If no HTTP request is sent and wait timeout is reached, then the step will fail.
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 53. Wait for the HTTP request</div>
+<div class="title">Example 74. Wait for the HTTP request</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given I start mobile application
 When I wait until HTTP GET or POST request with URL pattern `https://www.google.com/search?q=vividus` exists in proxy log
@@ -2945,18 +3804,18 @@ Add headers to the proxied HTTP request satisfying the desired condition</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>$comparisonRule</code> - <a href="../parameters/string-comparison-rule.html" class="page">String comparison rule</a></p>
+<p><code>$comparisonRule</code> - <a href="../parameters/string-comparison-rule.html" class="xref page">String comparison rule</a></p>
 </li>
 <li>
 <p><code>$url</code> - The input value of URL to filter by</p>
 </li>
 <li>
-<p><code>$headers</code> - ExamplesTable representing the list of the headers with columns "name" and "value" specifying HTTP header names and values respectively</p>
+<p><code>$headers</code> - The <a href="../glossary.html#_examplestable" class="xref page">ExamplesTable</a> representing the list of the headers with columns "name" and "value" specifying HTTP header names and values respectively</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 54. Add headers to the proxied HTTP request</div>
+<div class="title">Example 75. Add headers to the proxied HTTP request</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I add headers to proxied requests with URL pattern which is equal to `https://www.google.com/search?q=vividus`:
 |name     |value     |
@@ -2984,7 +3843,7 @@ The step clears the HTTP requests and responses recorded by the proxy</p>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 55. Clear the data recorded by the proxy</div>
+<div class="title">Example 76. Clear the data recorded by the proxy</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Given I start mobile application
 When I clear proxy log
@@ -3004,7 +3863,7 @@ The step clears previously created mocks</p>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 56. Clear the proxy mocks</div>
+<div class="title">Example 77. Clear the proxy mocks</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I mock HTTP responses with request URL which CONTAINS `vividus` using response code `200`, content `#{loadResource(page.html)}` and headers:
 |name        |value    |
@@ -3044,7 +3903,7 @@ No actual request will be executed. Short-circuited response will be returned.
 <p><code>$httpMethods</code> - The "or"-separated set of HTTP methods to filter by, e.g. <code>GET or POST or PUT</code>.</p>
 </li>
 <li>
-<p><code>$rule</code> - <a href="../parameters/string-comparison-rule.html" class="page">String comparison rule</a></p>
+<p><code>$rule</code> - <a href="../parameters/string-comparison-rule.html" class="xref page">String comparison rule</a></p>
 </li>
 <li>
 <p><code>$url</code> - The input value of URL to filter by</p>
@@ -3056,12 +3915,12 @@ No actual request will be executed. Short-circuited response will be returned.
 <p><code>$content</code> - The content to send within a response</p>
 </li>
 <li>
-<p><code>$headers</code> - ExamplesTable representing the list of the headers with columns "name" and "value" specifying HTTP header names and values respectively</p>
+<p><code>$headers</code> - The <a href="../glossary.html#_examplestable" class="xref page">ExamplesTable</a> representing the list of the headers with columns "name" and "value" specifying HTTP header names and values respectively</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 57. Hijack a page</div>
+<div class="title">Example 78. Hijack a page</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I mock HTTP POST responses with request URL which CONTAINS `example` using response code `202`, content `#{loadResource(mocked-example.json)}` and headers:
 |name        |value           |
@@ -3095,7 +3954,7 @@ No actual request will be executed. Short-circuited response will be returned.
 <div class="ulist">
 <ul>
 <li>
-<p><code>$rule</code> - <a href="../parameters/string-comparison-rule.html" class="page">String comparison rule</a></p>
+<p><code>$rule</code> - <a href="../parameters/string-comparison-rule.html" class="xref page">String comparison rule</a></p>
 </li>
 <li>
 <p><code>$url</code> - The input value of URL to filter by</p>
@@ -3107,12 +3966,12 @@ No actual request will be executed. Short-circuited response will be returned.
 <p><code>$content</code> - The content to send within a response</p>
 </li>
 <li>
-<p><code>$headers</code> - ExamplesTable representing the list of the headers with columns "name" and "value" specifying HTTP header names and values respectively</p>
+<p><code>$headers</code> - The <a href="../glossary.html#_examplestable" class="xref page">ExamplesTable</a> representing the list of the headers with columns "name" and "value" specifying HTTP header names and values respectively</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 58. Hijack a page</div>
+<div class="title">Example 79. Hijack a page</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I mock HTTP responses with request URL which CONTAINS `example.com` using response code `200`, content `#{loadResourceAsByteArray(page.html)}` and headers:
 |name        |value    |
@@ -3146,7 +4005,7 @@ No actual request will be executed. Short-circuited response will be returned.
 <div class="ulist">
 <ul>
 <li>
-<p><code>$rule</code> - <a href="../parameters/string-comparison-rule.html" class="page">String comparison rule</a></p>
+<p><code>$rule</code> - <a href="../parameters/string-comparison-rule.html" class="xref page">String comparison rule</a></p>
 </li>
 <li>
 <p><code>$url</code> - The input value of URL to filter by</p>
@@ -3155,12 +4014,12 @@ No actual request will be executed. Short-circuited response will be returned.
 <p><code>$code</code> - The response status code</p>
 </li>
 <li>
-<p><code>$headers</code> - ExamplesTable representing the list of the headers with columns "name" and "value" specifying HTTP header names and values respectively</p>
+<p><code>$headers</code> - The <a href="../glossary.html#_examplestable" class="xref page">ExamplesTable</a> representing the list of the headers with columns "name" and "value" specifying HTTP header names and values respectively</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Example 59. 404 page</div>
+<div class="title">Example 80. 404 page</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I mock HTTP responses with request URL which CONTAINS `example.com` using response code `404` and headers:
 |name          |value|
@@ -3257,16 +4116,40 @@ To be able to use this step in the cloud testing platform, review the documentat
 </table>
 </div>
 <div class="listingblock">
-<div class="title">Example 60. Turn OFF Wi-Fi for Android</div>
+<div class="title">Example 81. Turn OFF Wi-Fi for Android</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I turn OFF `WIFI` network connection</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example 61. Turn OFF Wi-Fi for iOS</div>
+<div class="title">Example 82. Turn OFF Wi-Fi for iOS</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I turn OFF `WIFI` network connection
-When I activate application with bundle identifier `my-aplication-bundle-id`</code></pre>
+When I activate application with bundle identifier `my-application-bundle-id`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_change_device_screen_orientation"><a class="anchor" href="#_change_device_screen_orientation"></a>Change device screen orientation</h3>
+<div class="paragraph">
+<p>Changes the device screen orientation.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I change device screen orientation to $orientation</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>$orientation</code> - The device screen orientation, either <code>portrait</code> or <code>landscape</code>.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example 83. Change the device screen orientation</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">When I change device screen orientation to portrait</code></pre>
 </div>
 </div>
 </div>
@@ -3279,10 +4162,10 @@ When I activate application with bundle identifier `my-aplication-bundle-id`</co
 <footer class="footer" style="padding: 0.25rem">
   <p>Copyright (C) 2019-2022 VIVIDUS team and individual contributors to <a href="https://docs.vividus.dev">VIVIDUS</a>. VIVIDUS is licensed under the <a href="https://github.com/vividus-framework/vividus/blob/master/LICENSE">Apache License 2.0</a></p>
 </footer>
-<script src="../../../_/js/site.js"></script>
-<script src="../../../_/js/vendor/lunr.js"></script>
-<script src="../../../_/js/vendor/search.js" id="search-script" data-base-path="../../.." data-page-path="/vividus/latest/plugins/plugin-mobile-app.html"></script>
-<script async src="../../../_/../search-index.js"></script>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+  <script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
 <script src="../../../_/js/vendor/highlight.min.js"></script>
 <script charset="UTF-8" src="../../../_/js/vendor/gherkin.min.js"></script>
 <script charset="UTF-8" src="../../../_/js/vendor/gradle.min.js"></script>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Jenkins pipeline using browser proxy in Docker container :: VIVIDUS</title>
     <link rel="canonical" href="https://docs.vividus.dev/vividus/latest/user-guides/pipeline-with-proxy.html">
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
@@ -13,9 +13,8 @@
 <link rel="manifest" href="../../../site.webmanifest">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-<script src="https://buttons.github.io/buttons.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 <link rel="stylesheet" href="../../../_/css/additional.css">
-<link rel="stylesheet" href="../../../_/css/search.css">
     <script>var uiRootPath = '../../../_'</script>
   </head>
   <body class="article">
@@ -25,8 +24,10 @@
          <div class="navbar-item">
             <a href="https://github.com/vividus-framework/vividus">VIVIDUS // Docs</a>
          </div>
-           <div class="navbar-item">
-             <input id="search-input" type="text" placeholder="Search docs">
+           <div class="navbar-item search hide-for-print">
+             <div id="search-field" class="field">
+               <input id="search-input" type="text" placeholder="Search the docs">
+             </div>
            </div>
          <button class="navbar-burger" data-target="topbar-nav">
          <span></span>
@@ -66,7 +67,7 @@
                </div>
             </div>
             <div class="navbar-item">
-              <a href="https://vividus-support.herokuapp.com/">
+              <a href="https://vividus-support.vercel.app/">
                 <span class="icon">
                   <svg fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                      <g stroke-width=".790123">
@@ -125,7 +126,16 @@
     <a class="nav-link" href="../glossary.html">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../tests-configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../reporting.html">Reporting</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -144,6 +154,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../commons/table-transformers.html">Table Transformers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../commons/cli.html">CLI</a>
   </li>
 </ul>
   </li>
@@ -178,6 +191,9 @@
     <a class="nav-link" href="../plugins/azure.html">Azure</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../plugins/plugin-azure-resource-manager.html">Resource Manager</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../plugins/plugin-azure-cosmos-db.html">Cosmos DB</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -191,6 +207,12 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../plugins/plugin-azure-functions.html">Functions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../plugins/plugin-azure-key-vault.html">Key Vault</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../plugins/plugin-azure-sql-db.html">SQL Database</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../plugins/plugin-azure-storage-account.html">Storage Account</a>
@@ -216,16 +238,31 @@
     <a class="nav-link" href="../plugins/plugin-excel.html">Excel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../plugins/plugin-html.html">HTML*</a>
+    <a class="nav-link" href="../plugins/plugin-html.html">HTML</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../plugins/plugin-json.html">JSON</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../plugins/plugin-parquet.html">Parquet*</a>
+    <a class="nav-link" href="../plugins/plugin-parquet.html">Parquet</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../plugins/plugin-xml.html">XML*</a>
+    <a class="nav-link" href="../plugins/plugin-xml.html">XML</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../plugins/plugin-yaml.html">YAML</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Remoting</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../plugins/plugin-ssh.html">SSH</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../plugins/plugin-winrm.html">WinRM</a>
   </li>
 </ul>
   </li>
@@ -235,6 +272,9 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../plugins/plugin-browserstack.html">BrowserStack</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../plugins/plugin-mobitru.html">Mobitru</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../plugins/plugin-lambda-test.html">LambdaTest</a>
@@ -251,13 +291,13 @@
     <a class="nav-link" href="../plugins/plugin-accessibility.html">Accessibility</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugins/plugin-applitools.html">Applitools*</a>
+    <a class="nav-link" href="../plugins/plugin-applitools.html">Applitools</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../plugins/plugin-datetime.html">Date/Time</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugins/plugin-electron.html">Electron*</a>
+    <a class="nav-link" href="../plugins/plugin-electron.html">Electron</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../plugins/plugin-email.html">Email</a>
@@ -278,7 +318,7 @@
     <a class="nav-link" href="../plugins/plugin-rest-api.html">REST API</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugins/plugin-ssh.html">SSH</a>
+    <a class="nav-link" href="../plugins/plugin-shell.html">Shell</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../plugins/plugin-visual.html">Visual Testing</a>
@@ -367,6 +407,15 @@
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Mobile Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="appium-setup.html">Appium Setup</a>
+  </li>
+</ul>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
@@ -374,7 +423,19 @@
     <span class="nav-text">Developer Guides</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../developer-guides/custom-plugins.html">Custom Plugins</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../developer-guides/extension-points.html">Extension points</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developer-guides/extensions.html">Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developer-guides/plugins.html">Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developer-guides/custom-modules.html">Custom modules</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -394,79 +455,70 @@
           <a href="../index.html">latest</a>
         </li>
         <li class="version">
+          <a href="../../0.5.2/index.html">0.5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../0.5.1/index.html">0.5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../0.5.0/index.html">0.5.0</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.16/index.html">0.4.16</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.15/index.html">0.4.15</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.14/index.html">0.4.14</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.13/index.html">0.4.13</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.12/index.html">0.4.12</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.11/index.html">0.4.11</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.10/index.html">0.4.10</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.9/index.html">0.4.9</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.8/index.html">0.4.8</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.7/index.html">0.4.7</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.6/index.html">0.4.6</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.5/index.html">0.4.5</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.4/index.html">0.4.4</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.3/index.html">0.4.3</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.2/index.html">0.4.2</a>
+        </li>
+        <li class="version">
+          <a href="../../0.4.1/index.html">0.4.1</a>
+        </li>
+        <li class="version">
           <a href="../../0.4.0/index.html">0.4.0</a>
         </li>
         <li class="version">
           <a href="../../0.3.12/index.html">0.3.12</a>
         </li>
         <li class="version">
-          <a href="../../0.3.11/index.html">0.3.11</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.10/index.html">0.3.10</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.9/index.html">0.3.9</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.8/index.html">0.3.8</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.7/index.html">0.3.7</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.6/index.html">0.3.6</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.5/index.html">0.3.5</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.4/index.html">0.3.4</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.3/index.html">0.3.3</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.2/index.html">0.3.2</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.1/index.html">0.3.1</a>
-        </li>
-        <li class="version">
-          <a href="../../0.3.0/index.html">0.3.0</a>
-        </li>
-        <li class="version">
           <a href="../../0.2.14/index.html">0.2.14</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.13/index.html">0.2.13</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.12/index.html">0.2.12</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.11/index.html">0.2.11</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.10/index.html">0.2.10</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.9/index.html">0.2.9</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.8/index.html">0.2.8</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.7/index.html">0.2.7</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.6/index.html">0.2.6</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.5/index.html">0.2.5</a>
-        </li>
-        <li class="version">
-          <a href="../../0.2.4/index.html">0.2.4</a>
         </li>
       </ul>
     </li>
@@ -491,31 +543,28 @@
   <button class="version-menu-toggle" title="Show other versions of page">latest</button>
   <div class="version-menu">
     <a class="version is-current" href="pipeline-with-proxy.html">latest</a>
+    <a class="version" href="../../0.5.2/user-guides/pipeline-with-proxy.html">0.5.2</a>
+    <a class="version" href="../../0.5.1/user-guides/pipeline-with-proxy.html">0.5.1</a>
+    <a class="version" href="../../0.5.0/user-guides/pipeline-with-proxy.html">0.5.0</a>
+    <a class="version" href="../../0.4.16/user-guides/pipeline-with-proxy.html">0.4.16</a>
+    <a class="version" href="../../0.4.15/user-guides/pipeline-with-proxy.html">0.4.15</a>
+    <a class="version" href="../../0.4.14/user-guides/pipeline-with-proxy.html">0.4.14</a>
+    <a class="version" href="../../0.4.13/user-guides/pipeline-with-proxy.html">0.4.13</a>
+    <a class="version" href="../../0.4.12/user-guides/pipeline-with-proxy.html">0.4.12</a>
+    <a class="version" href="../../0.4.11/user-guides/pipeline-with-proxy.html">0.4.11</a>
+    <a class="version" href="../../0.4.10/user-guides/pipeline-with-proxy.html">0.4.10</a>
+    <a class="version" href="../../0.4.9/user-guides/pipeline-with-proxy.html">0.4.9</a>
+    <a class="version" href="../../0.4.8/user-guides/pipeline-with-proxy.html">0.4.8</a>
+    <a class="version" href="../../0.4.7/user-guides/pipeline-with-proxy.html">0.4.7</a>
+    <a class="version" href="../../0.4.6/user-guides/pipeline-with-proxy.html">0.4.6</a>
+    <a class="version" href="../../0.4.5/user-guides/pipeline-with-proxy.html">0.4.5</a>
+    <a class="version" href="../../0.4.4/user-guides/pipeline-with-proxy.html">0.4.4</a>
+    <a class="version" href="../../0.4.3/user-guides/pipeline-with-proxy.html">0.4.3</a>
+    <a class="version" href="../../0.4.2/user-guides/pipeline-with-proxy.html">0.4.2</a>
+    <a class="version" href="../../0.4.1/user-guides/pipeline-with-proxy.html">0.4.1</a>
     <a class="version" href="../../0.4.0/user-guides/pipeline-with-proxy.html">0.4.0</a>
     <a class="version is-missing" href="../../0.3.12/index.html">0.3.12</a>
-    <a class="version is-missing" href="../../0.3.11/index.html">0.3.11</a>
-    <a class="version is-missing" href="../../0.3.10/index.html">0.3.10</a>
-    <a class="version is-missing" href="../../0.3.9/index.html">0.3.9</a>
-    <a class="version is-missing" href="../../0.3.8/index.html">0.3.8</a>
-    <a class="version is-missing" href="../../0.3.7/index.html">0.3.7</a>
-    <a class="version is-missing" href="../../0.3.6/index.html">0.3.6</a>
-    <a class="version is-missing" href="../../0.3.5/index.html">0.3.5</a>
-    <a class="version is-missing" href="../../0.3.4/index.html">0.3.4</a>
-    <a class="version is-missing" href="../../0.3.3/index.html">0.3.3</a>
-    <a class="version is-missing" href="../../0.3.2/index.html">0.3.2</a>
-    <a class="version is-missing" href="../../0.3.1/index.html">0.3.1</a>
-    <a class="version is-missing" href="../../0.3.0/index.html">0.3.0</a>
     <a class="version is-missing" href="../../0.2.14/index.html">0.2.14</a>
-    <a class="version is-missing" href="../../0.2.13/index.html">0.2.13</a>
-    <a class="version is-missing" href="../../0.2.12/index.html">0.2.12</a>
-    <a class="version is-missing" href="../../0.2.11/index.html">0.2.11</a>
-    <a class="version is-missing" href="../../0.2.10/index.html">0.2.10</a>
-    <a class="version is-missing" href="../../0.2.9/index.html">0.2.9</a>
-    <a class="version is-missing" href="../../0.2.8/index.html">0.2.8</a>
-    <a class="version is-missing" href="../../0.2.7/index.html">0.2.7</a>
-    <a class="version is-missing" href="../../0.2.6/index.html">0.2.6</a>
-    <a class="version is-missing" href="../../0.2.5/index.html">0.2.5</a>
-    <a class="version is-missing" href="../../0.2.4/index.html">0.2.4</a>
   </div>
 </div>
   <div class="edit-this-page"><a href="https://github.com/vividus-framework/vividus/edit/master/docs/modules/user-guides/pages/pipeline-with-proxy.adoc">Edit this Page</a></div>
@@ -532,17 +581,17 @@
 def vividusHub = 'vividus-hub'<i class="conum" data-value="2"></i><b>(2)</b>
 def vividusBrowser = 'vividus-browser'<i class="conum" data-value="3"></i><b>(3)</b>
 def vividusProxyHost = 'vividus-proxy-host'<i class="conum" data-value="4"></i><b>(4)</b>
-def seleniumVersion = '3.141.59-20210804'<i class="conum" data-value="5"></i><b>(5)</b>
+def seleniumVersion = '4.5.0'<i class="conum" data-value="5"></i><b>(5)</b>
 def overridings = """
                         proxy.host=${vividusProxyHost}<i class="conum" data-value="4"></i><b>(4)</b>
                         proxy.connectable-host=${vividusProxyHost}<i class="conum" data-value="4"></i><b>(4)</b>
-                        selenium.grid.enabled=true
+                        configuration.suites=web_app
+                        configuration.profiles=web/docker,web/desktop/chrome
                         selenium.grid.url=http://${vividusHub}:4444/wd/hub<i class="conum" data-value="2"></i><b>(2)</b>
-                        selenium.grid.capabilities.platformName=LINUX
                   """
-def projectName = 'vividus-test-project'<i class="conum" data-value="6"></i><b>(6)</b>
+def projectName = 'vividus-sample-tests'<i class="conum" data-value="6"></i><b>(6)</b>
 def scmCredentialId = 'vividus'<i class="conum" data-value="7"></i><b>(7)</b>
-def gitUrl = 'git@github.com:vividus/vividus-test-project.git'<i class="conum" data-value="8"></i><b>(8)</b>
+def gitUrl = 'git@github.com:vividus-framework/vividus-sample-tests.git'<i class="conum" data-value="8"></i><b>(8)</b>
 
 pipeline {
   agent {
@@ -554,14 +603,14 @@ pipeline {
         steps {
            sh "docker network create ${vividusNetwork}"<i class="conum" data-value="1"></i><b>(1)</b>
            sh "docker run -d --net ${vividusNetwork} --name ${vividusHub} selenium/hub:${seleniumVersion}"<i class="conum" data-value="2"></i><b>(2)</b>
-           sh "docker run -d --net ${vividusNetwork} -e HUB_HOST=${vividusHub} -e SCREEN_WIDTH=1920 -e SCREEN_HEIGHT=1080 --shm-size=2g --name ${vividusBrowser} selenium/node-chrome:${seleniumVersion}"<i class="conum" data-value="3"></i><b>(3)</b><i class="conum" data-value="5"></i><b>(5)</b>
+           sh "docker run -d --net ${vividusNetwork} -e SE_EVENT_BUS_HOST=${vividusHub} -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 -e SCREEN_WIDTH=1920 -e SCREEN_HEIGHT=1080 --shm-size=2g --name ${vividusBrowser} selenium/node-chrome:${seleniumVersion}"<i class="conum" data-value="3"></i><b>(3)</b><i class="conum" data-value="5"></i><b>(5)</b>
         }
     }
 
     stage('Load Source') {
         steps {
             checkout([$class: 'GitSCM',
-                branches: [[name: 'master']],
+                branches: [[name: 'main']],
                 doGenerateSubmoduleConfigurations: false,
                 extensions: [
                     [$class: 'RelativeTargetDirectory', relativeTargetDir: projectName],<i class="conum" data-value="6"></i><b>(6)</b>
@@ -580,7 +629,7 @@ pipeline {
     stage('Run Tests Using Docker') {
         steps {
                 sh "docker ps -a"
-                withDockerContainer(image: 'openjdk:16.0.2-oraclelinux8', args: "--net ${vividusNetwork} --name ${vividusProxyHost}") {<i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="4"></i><b>(4)</b>
+                withDockerContainer(image: 'eclipse-temurin:17', args: "--net ${vividusNetwork} --name ${vividusProxyHost}") {<i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="4"></i><b>(4)</b>
                 dir(projectName) {<i class="conum" data-value="6"></i><b>(6)</b>
                     sh """ <i class="conum" data-value="9"></i><b>(9)</b>
                         echo -e "${overridings}" &gt; overriding.properties
@@ -673,10 +722,10 @@ For more information about pipeline syntax and jenkins directives read <a href="
 <footer class="footer" style="padding: 0.25rem">
   <p>Copyright (C) 2019-2022 VIVIDUS team and individual contributors to <a href="https://docs.vividus.dev">VIVIDUS</a>. VIVIDUS is licensed under the <a href="https://github.com/vividus-framework/vividus/blob/master/LICENSE">Apache License 2.0</a></p>
 </footer>
-<script src="../../../_/js/site.js"></script>
-<script src="../../../_/js/vendor/lunr.js"></script>
-<script src="../../../_/js/vendor/search.js" id="search-script" data-base-path="../../.." data-page-path="/vividus/latest/user-guides/pipeline-with-proxy.html"></script>
-<script async src="../../../_/../search-index.js"></script>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+  <script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
 <script src="../../../_/js/vendor/highlight.min.js"></script>
 <script charset="UTF-8" src="../../../_/js/vendor/gherkin.min.js"></script>
 <script charset="UTF-8" src="../../../_/js/vendor/gradle.min.js"></script>
